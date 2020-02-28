@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    public Transform target;
+
     public float moveSpeed;
-    public Transform target2;
 
     // Use this for initialization
     void Start()
