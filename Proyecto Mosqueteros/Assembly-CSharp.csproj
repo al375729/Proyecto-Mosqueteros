@@ -65,8 +65,11 @@
   <ItemGroup>
     <Compile Include="Assets\Camara.cs" />
     <Compile Include="Assets\CameraMov.cs" />
+    <Compile Include="Assets\Collision.cs" />
     <Compile Include="Assets\LevelGenerator.cs" />
     <Compile Include="Assets\Movement.cs" />
+    <Compile Include="Assets\Shoot.cs" />
+    <Compile Include="Assets\TrojanScript.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/seycr/Desktop/3 Mosqueteros/Proyecto-Mosqueteros/Proyecto Mosqueteros/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
