@@ -19,7 +19,7 @@ public class Movement : MonoBehaviour
     void FixedUpdate()
     {
         transform.Translate(moveSpeed * Input.GetAxis("Horizontal") * Time.fixedDeltaTime, 0f, moveSpeed * Input.GetAxis("Vertical") * Time.fixedDeltaTime);
-        //transform.rotation = target.rotation;
+       
         
     }
 

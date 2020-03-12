@@ -12,7 +12,7 @@ public class LevelGenerator : MonoBehaviour
     public GameObject sala;
     private Quaternion newRotation;
     private int[,] matriz;
-    //private int numSalas = 10;
+    private int numSalas = 10;
 
 
 
@@ -47,7 +47,7 @@ public class LevelGenerator : MonoBehaviour
         int medio1 = (int)Math.Round((dimension / 2) + 0.5);
         int medio2 = medio1;
         int control = 0;
-        while (control < 12)
+        while (control < numSalas)
         {
             ran = UnityEngine.Random.Range(0, 3);
             matriz[medio1, medio2] = 1;
@@ -115,7 +115,7 @@ public class LevelGenerator : MonoBehaviour
             {
                 if (matriz[i, j] == 1)
                 {
-                   Instantiate(sala, new Vector3(i * 9.0f, 0, j * 9.0f), newRotation);
+                   Instantiate(sala, new Vector3(i * 90.0f, 0, j * 90.0f), newRotation);
                    
                 }
             }

@@ -64,7 +64,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Camara.cs" />
-    <Compile Include="Assets\CameraMov.cs" />
     <Compile Include="Assets\Collision.cs" />
     <Compile Include="Assets\LevelGenerator.cs" />
     <Compile Include="Assets\Movement.cs" />
