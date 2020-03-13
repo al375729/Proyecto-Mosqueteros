@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\ColisionesDisparo.cs" />
     <Compile Include="Assets\Scripts\ControlCamara.cs" />
     <Compile Include="Assets\Scripts\DisparoJugador.cs" />
+    <Compile Include="Assets\Scripts\EnemigoPerseguidor.cs" />
     <Compile Include="Assets\Scripts\GeneradorDeNiveles.cs" />
     <Compile Include="Assets\Scripts\Movimiento.cs" />
     <Reference Include="Unity.Timeline.Editor">
