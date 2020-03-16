@@ -2307,9 +2307,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1766725223}
-  m_LocalRotation: {x: 0.48738396, y: -0.51230556, z: 0.51230556, w: 0.48738384}
-  m_LocalPosition: {x: 0.01, y: 0.18, z: 1.22}
-  m_LocalScale: {x: 0.018999996, y: 0.009999998, z: 0.018399999}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.183, z: 1.007}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children: []
   m_Father: {fileID: 4751883165941673017}
   m_RootOrder: 0
@@ -3233,6 +3233,7 @@ GameObject:
   - component: {fileID: 496572217204508991}
   - component: {fileID: 5267296341111651225}
   - component: {fileID: 9015499687545149533}
+  - component: {fileID: 7043774342844182685}
   m_Layer: 0
   m_Name: BRAZO
   m_TagString: Untagged
@@ -3240,6 +3241,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!136 &7043774342844182685
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7043774342844182684}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.45
+  m_Height: 3.36
+  m_Direction: 2
+  m_Center: {x: 0.10015392, y: -0.0021150112, z: 1.1700084}
 --- !u!1 &7226650186849530838
 GameObject:
   m_ObjectHideFlags: 0
