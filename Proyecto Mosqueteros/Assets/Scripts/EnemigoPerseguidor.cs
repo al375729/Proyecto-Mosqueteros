@@ -5,20 +5,35 @@ using UnityEngine;
 public class EnemigoPerseguidor : MonoBehaviour
 {
 
-    public Transform target;
-    Vector3 lookDirection;
-    public float speed;
-    // Start is called before the first frame update
+    public Transform Player;
+    public int MoveSpeed = 40;
+    public int MaxDist = 10;
+    public int MinDist = 10;
+
+
+
+
     void Start()
     {
-        
+
     }
 
-    // Update is called once per frame
     void Update()
     {
-        lookDirection = (target.position - transform.position.normalized);
-        transform.Translate(lookDirection * Time.deltaTime * speed);
+        transform.LookAt(Player);
 
+        if (Vector3.Distance(transform.position, Player.position) >= MinDist)
+        {
+
+            transform.position += transform.forward * MoveSpeed * Time.deltaTime;
+
+
+
+            if (Vector3.Distance(transform.position, Player.position) <= MaxDist)
+            {
+                //Here Call any function U want Like Shoot at here or something
+            }
+
+        }
     }
 }

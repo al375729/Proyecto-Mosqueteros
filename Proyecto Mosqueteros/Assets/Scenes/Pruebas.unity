@@ -547,8 +547,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 265318b72cbd5d841b8e81ff421ee6b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1716680067}
-  speed: 50
+  Player: {fileID: 1716680067}
+  MoveSpeed: 40
+  MaxDist: 10
+  MinDist: 10
 --- !u!65 &255560555
 BoxCollider:
   m_ObjectHideFlags: 0
