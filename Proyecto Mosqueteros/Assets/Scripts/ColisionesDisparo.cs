@@ -16,12 +16,23 @@ public class ColisionesDisparo : MonoBehaviour
         
     }
     
-    void OnCollisionEnter(UnityEngine.Collision collision)
+    /*void OnCollisionEnter(UnityEngine.Collision collision)
     {
         if (collision.gameObject.tag == "Stop")
         {
             Destroy(this.gameObject);
             
+        }
+    }
+    */
+
+     void OnTriggerEnter(Collider other)
+    {
+
+        if (other.gameObject.tag == "Stop")
+        {
+            Destroy(this.gameObject);
+
         }
     }
 }
