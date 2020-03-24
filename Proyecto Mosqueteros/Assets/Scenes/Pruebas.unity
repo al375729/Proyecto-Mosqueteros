@@ -1015,6 +1015,7 @@ GameObject:
   - component: {fileID: 1716680068}
   - component: {fileID: 1716680070}
   - component: {fileID: 1716680066}
+  - component: {fileID: 1716680071}
   m_Layer: 0
   m_Name: Jugador
   m_TagString: Untagged
@@ -1100,6 +1101,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!114 &1716680071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716680065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a80031ae6e2f3c4191560fba064d131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disparoJugador: {fileID: 0}
+  modelosPosibles:
+  - {fileID: 1895577748863677493, guid: bdf5534ac71b27d499c8c590d612b2d5, type: 3}
+  - {fileID: 6168361849730028303, guid: b9c2069effafa6549a1293880ddef1af, type: 3}
+  - {fileID: 1643081231530466239, guid: 446c85167eb76d64bbffd723f392030c, type: 3}
+  - {fileID: 8073593595299414460, guid: ca83b68a02a88064983303a92d320e5d, type: 3}
+  materialBala: {fileID: 0}
+  colorBala: {r: 0, g: 0, b: 0, a: 0}
+  velocidadBala: 0
 --- !u!1 &1721993186
 GameObject:
   m_ObjectHideFlags: 0
