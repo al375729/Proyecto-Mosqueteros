@@ -12,11 +12,13 @@ public class GeneraBalas : MonoBehaviour
 
 
     //Material de la bala para cambiarle el color
-    public Material materialBala;
+    //public Material materialBala;
     public Color colorBala;
+    Color [] seleccionColor = {Color.red, Color.blue, Color.white, Color.black, Color.cyan, Color.green, Color.grey, Color.magenta, Color.yellow};
 
     //Sistema de partículas de la bala
-    //public ParticleSystem sistemaParticulas;
+    public GameObject particulas;
+    ParticleSystem sistemaParticulas;
 
     //Velocidad de la bala
     public float velocidadBala;
@@ -50,15 +52,14 @@ public class GeneraBalas : MonoBehaviour
 
             //Se determina el valor del color, cambiando aleatoriamente
             //el valor H del sistema de color HSV (de 0 a 360)
-            //float h_aleatorio = Random.Range(0f, 360f);
+            int h_aleatorio = Random.Range(0, seleccionColor.Length);
             //colorBala = new Color( h_aleatorio, 100f, 100f);
-            colorBala = new Color(Random.Range(0,255), 0, 255);
+            colorBala = seleccionColor[h_aleatorio];
 
-            //Es necesario obteneer el renderer
-            Renderer rend = nuevaBala.GetComponent<Renderer>();
-            rend.sharedMaterial.SetColor("_Color", colorBala);
-            rend.sharedMaterial.SetColor("_EmissionColor", colorBala);
+            disparoJugador.colorBala = colorBala;
 
+            //Añadir partículas a la bala
+            //sistemaParticulas.main.startColor = colorBala;
 
             //Insertar bala generada en DisparoJugador
             disparoJugador.theBullet = nuevaBala;

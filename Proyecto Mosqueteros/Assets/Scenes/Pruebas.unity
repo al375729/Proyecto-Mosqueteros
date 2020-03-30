@@ -1119,8 +1119,9 @@ MonoBehaviour:
   - {fileID: 6168361849730028303, guid: b9c2069effafa6549a1293880ddef1af, type: 3}
   - {fileID: 1643081231530466239, guid: 446c85167eb76d64bbffd723f392030c, type: 3}
   - {fileID: 8073593595299414460, guid: ca83b68a02a88064983303a92d320e5d, type: 3}
-  materialBala: {fileID: 0}
   colorBala: {r: 0, g: 0, b: 0, a: 0}
+  particulas: {fileID: 1979347214087123732, guid: c01916c45356ec14fa370700360570cb,
+    type: 3}
   velocidadBala: 0
 --- !u!1 &1721993186
 GameObject:

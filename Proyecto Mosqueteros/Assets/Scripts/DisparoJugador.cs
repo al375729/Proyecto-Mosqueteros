@@ -15,6 +15,9 @@ public class DisparoJugador : MonoBehaviour
     public float waitBeforeNextShot = 0.25f;
     GameObject bullet;
 
+    //Color de la bala (decidido en GeneraBalas)
+    public Color colorBala = Color.white;
+
     private void Update()
     {
         if (Input.GetKey(KeyCode.Mouse0))
@@ -35,10 +38,21 @@ public class DisparoJugador : MonoBehaviour
     }
     void Shoott()
     {
-         bullet = Instantiate(theBullet, barrelEnd.position, barrelEnd.rotation);
+        bullet = Instantiate(theBullet, barrelEnd.position, barrelEnd.rotation);
+        
+        ParametrosGeneraBalas();
+        
         bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * bulletSpeed;
 
 
+    }
+
+    void ParametrosGeneraBalas()
+    {
+        //Es necesario obteneer el renderer
+        Renderer rend = bullet.GetComponent<Renderer>();
+        rend.material.SetColor("_Color", colorBala);
+        rend.material.SetColor("_EmissionColor", colorBala);
     }
 
     
