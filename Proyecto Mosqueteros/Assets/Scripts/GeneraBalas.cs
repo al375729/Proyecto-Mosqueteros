@@ -21,7 +21,8 @@ public class GeneraBalas : MonoBehaviour
     ParticleSystem sistemaParticulas;
 
     //Velocidad de la bala
-    public float velocidadBala;
+    public float velocidad_min = 100f;
+    public float velocidad_max = 300f;
 
 
 
@@ -30,10 +31,6 @@ public class GeneraBalas : MonoBehaviour
     {
         //Obtener script DisparoJugador
         disparoJugador = GetComponent<DisparoJugador>();
-
-        //Para el material
-        //rend.sharedMaterial = materialBala;
-        //colorBala = materialBala.color;
 
     }
 
@@ -49,17 +46,18 @@ public class GeneraBalas : MonoBehaviour
             Debug.Log(seleccion);
             GameObject nuevaBala = modelosPosibles[seleccion];
 
-
-            //Se determina el valor del color, cambiando aleatoriamente
-            //el valor H del sistema de color HSV (de 0 a 360)
+            //Selección de color de la bala aleatorio
             int h_aleatorio = Random.Range(0, seleccionColor.Length);
-            //colorBala = new Color( h_aleatorio, 100f, 100f);
             colorBala = seleccionColor[h_aleatorio];
-
             disparoJugador.colorBala = colorBala;
 
-            //Añadir partículas a la bala
-            //sistemaParticulas.main.startColor = colorBala;
+            //Segundo color aleatorio para las partículas
+            int segundoAleatorio = Random.Range(0, seleccionColor.Length);
+            disparoJugador.colorFinalParticulas = seleccionColor[segundoAleatorio];
+
+            //Velocidad de la bala
+            float velocidadBala = Random.Range(velocidad_min, velocidad_max);
+            disparoJugador.bulletSpeed = velocidadBala;
 
             //Insertar bala generada en DisparoJugador
             disparoJugador.theBullet = nuevaBala;

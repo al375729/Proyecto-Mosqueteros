@@ -1072,6 +1072,9 @@ MonoBehaviour:
   despawnTime: 3
   shootAble: 1
   waitBeforeNextShot: 0.25
+  colorBala: {r: 1, g: 1, b: 1, a: 1}
+  particulas: {fileID: 1979347214087123732, guid: c01916c45356ec14fa370700360570cb,
+    type: 3}
 --- !u!114 &1716680069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1117,12 +1120,12 @@ MonoBehaviour:
   modelosPosibles:
   - {fileID: 1895577748863677493, guid: bdf5534ac71b27d499c8c590d612b2d5, type: 3}
   - {fileID: 6168361849730028303, guid: b9c2069effafa6549a1293880ddef1af, type: 3}
-  - {fileID: 1643081231530466239, guid: 446c85167eb76d64bbffd723f392030c, type: 3}
   - {fileID: 8073593595299414460, guid: ca83b68a02a88064983303a92d320e5d, type: 3}
   colorBala: {r: 0, g: 0, b: 0, a: 0}
   particulas: {fileID: 1979347214087123732, guid: c01916c45356ec14fa370700360570cb,
     type: 3}
-  velocidadBala: 0
+  velocidad_min: 100
+  velocidad_max: 300
 --- !u!1 &1721993186
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,7 +8,7 @@ public class DisparoJugador : MonoBehaviour
     public GameObject theBullet;
     public Transform barrelEnd;
 
-    public int bulletSpeed;
+    public float bulletSpeed = 200f;
     public float despawnTime = 3.0f;
 
     public bool shootAble = true;
@@ -17,6 +17,9 @@ public class DisparoJugador : MonoBehaviour
 
     //Color de la bala (decidido en GeneraBalas)
     public Color colorBala = Color.white;
+    //Sistema de partículas que acompaña a la bala
+    public GameObject particulas;
+    public Color colorFinalParticulas;
 
     private void Update()
     {
@@ -51,8 +54,31 @@ public class DisparoJugador : MonoBehaviour
     {
         //Es necesario obteneer el renderer
         Renderer rend = bullet.GetComponent<Renderer>();
+        //Cambiar colores normal y de emisión a la bala
         rend.material.SetColor("_Color", colorBala);
         rend.material.SetColor("_EmissionColor", colorBala);
+
+        //Instanciar partículas de la bala
+        GameObject part = Instantiate(particulas, barrelEnd.position, barrelEnd.rotation);
+        //Para que el color inicial de las partículas sea el mismo que el de la bala
+        // VERSIÓN 1: https://docs.unity3d.com/ScriptReference/ParticleSystem.MainModule-startColor.html
+        /*var main = part.GetComponent<ParticleSystem>().main;
+        main.startColor = colorBala;*/
+
+        // VERSIÓN 2: https://docs.unity3d.com/ScriptReference/ParticleSystem.ColorOverLifetimeModule-color.html
+        var cambioColor = part.GetComponent<ParticleSystem>().colorOverLifetime;
+        cambioColor.enabled = true;
+
+        Gradient gradient = new Gradient();
+        gradient.SetKeys(
+            new GradientColorKey[] { new GradientColorKey(colorBala, 0.0f), new GradientColorKey(colorFinalParticulas, 1.0f) },
+            new GradientAlphaKey[] { new GradientAlphaKey(1.0f, 0.0f), new GradientAlphaKey(0.0f, 1.0f) }
+        );
+
+        cambioColor.color = new ParticleSystem.MinMaxGradient(gradient);
+
+        //Añadir objeto de sistema de partículas a la bala
+        part.transform.parent = bullet.transform;
     }
 
     
