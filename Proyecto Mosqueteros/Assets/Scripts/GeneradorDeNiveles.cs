@@ -124,13 +124,13 @@ public class GeneradorDeNiveles : MonoBehaviour
                 {
                     if (i + 1 < dimension && matriz[i + 1, j] == 1 && j + 1 < dimension && matriz[i + 1, j] == 1 && i - 1 > 0 && matriz[i + 1, j] == 1 && j - 1 > dimension && matriz[i + 1, j] == 1)//Si la sala esta rodeada por otras
                     {
-                        Instantiate(sala, new Vector3(i * 180f, 0, j * 180f), newRotation);
+                        Instantiate(sala, new Vector3(i * 90f, 0, j * 90f), newRotation);
                         
                     }
 
                     else if ((i + 1 < dimension && matriz[i + 1, j] == 1) && j - 1 > 0 && matriz[i, j - 1] == 1 && j + 1 < dimension && matriz[i, j + 1] == 1)//Si hay una sala arriba , una a la izquierda y una a la derecha
                     {
-                        Instantiate(sala3P, new Vector3(i * 180f, 10f, j * 180f), Quaternion.Euler(-90, 90, 0));
+                        Instantiate(sala3P, new Vector3(i * 90f, 10f, j * 90f), Quaternion.Euler(-0, 90, 0));
                     }
 
 
@@ -138,72 +138,72 @@ public class GeneradorDeNiveles : MonoBehaviour
                      
                     else if ((i - 1 > 0 && matriz[i - 1, j] == 1) && j - 1 > 0 && matriz[i, j - 1] == 1 && j + 1 < dimension && matriz[i, j + 1] == 1)//Si hay una sala abajo , una a la izquierda y una a la derecha
                     {
-                        Instantiate(sala3P, new Vector3(i * 180f, 10f, j * 180f), Quaternion.Euler(-90, -90, 0));
+                        Instantiate(sala3P, new Vector3(i * 90f, 10f, j * 90f), Quaternion.Euler(-0, -90, 0));
                     }
 
 
                     else if ((i - 1 > 0 && matriz[i - 1, j] == 1) && i + 1 < dimension && matriz[i + 1, j] == 1  && j + 1 < dimension && matriz[i, j + 1] == 1)//Si hay una sala a la arriba , una abajo y una a la izquierda
                     {
-                        Instantiate(sala3P, new Vector3(i * 180f, 10f, j * 180f), Quaternion.Euler(-90, 0, 0));
+                        Instantiate(sala3P, new Vector3(i * 90f, 10f, j * 90f), Quaternion.Euler(-0, 0, 0));
                     }
 
                     else if ((i - 1 > 0 && matriz[i - 1, j] == 1) && i + 1 < dimension && matriz[i + 1, j] == 1  && j - 1 > 0 && matriz[i, j - 1] == 1)//Si hay una sala a la arriba , una abajo y una a la derecha
                     {
-                        Instantiate(sala3P, new Vector3(i * 180f, 10f, j * 180f), Quaternion.Euler(-90, 180, 0));
+                        Instantiate(sala3P, new Vector3(i * 90f, 10f, j * 90f), Quaternion.Euler(-0, 180, 0));
                     }
 
                      else if ((i - 1 > 0 && matriz[i - 1, j] == 1) && i + 1 < dimension && matriz[i + 1, j] == 1)//Si hay una sala a la arriba y una abajo
                     {
-                        Instantiate(sala2PSeparadas, new Vector3(i * 180f, 10f, j * 180f), Quaternion.Euler(-90, 0, 0));
+                        Instantiate(sala2PSeparadas, new Vector3(i * 90f, 10f, j * 90f), Quaternion.Euler(-0, 0, 0));
                     }
                      
                      else if (j - 1 > 0 && matriz[i, j - 1] == 1 && j + 1 < dimension && matriz[i, j + 1] == 1)//Si hay una sala a la derecha y una a la izquierda
                     {
-                        Instantiate(sala2PSeparadas, new Vector3(i * 180f, 10f, j * 180f), Quaternion.Euler(-90, 90, 0));
+                        Instantiate(sala2PSeparadas, new Vector3(i * 90f, 10f, j * 90f), Quaternion.Euler(-0, 90, 0));
                     }
 
                      else if (j - 1 > 0 && matriz[i, j - 1] == 1 && (i - 1 > 0 && matriz[i - 1, j] == 1))//Si hay una sala a la derecha y una abajo
                     {
-                        Instantiate(sala2PJuntas, new Vector3(i * 180f, 10f, j * 180f), Quaternion.Euler(-90, 180, 0));
+                        Instantiate(sala2PJuntas, new Vector3(i * 90f, 10f, j * 90f), Quaternion.Euler(-0, 180, 0));
                     }
                     else if (j + 1 < dimension && matriz[i, j + 1] == 1 && (i - 1 > 0 && matriz[i - 1, j] == 1))//Si hay una sala a la izquierda y una abajo
                     {
-                        Instantiate(sala2PJuntas, new Vector3(i * 180f, 10f, j * 180f), Quaternion.Euler(-90, -90, 0));
+                        Instantiate(sala2PJuntas, new Vector3(i * 90f, 10f, j * 90f), Quaternion.Euler(-0, -90, 0));
                     }
 
                      else if (j + 1 < dimension && matriz[i, j + 1] == 1 && (i + 1 < dimension && matriz[i + 1, j] == 1))//Si hay una sala a la izquierda y una arriba
                     {
-                        Instantiate(sala2PJuntas, new Vector3(i * 180f, 10f, j * 180f), Quaternion.Euler(-90, 0, 0));
+                        Instantiate(sala2PJuntas, new Vector3(i * 90f, 10f, j * 90f), Quaternion.Euler(-0, 0, 0));
                     }
                      
                      else if (j - 1 > 0 && matriz[i, j - 1] == 1 && (i + 1 < dimension && matriz[i + 1, j] == 1))//Si hay una sala a la arriba y una a la derecha
                     {
-                        Instantiate(sala2PJuntas, new Vector3(i * 180f, 10f, j * 180f), Quaternion.Euler(-90, +90, 0));
+                        Instantiate(sala2PJuntas, new Vector3(i * 90f, 10f, j * 90f), Quaternion.Euler(-0, +90, 0));
                     }
                      
                    
 
                     else if (j + 1 < dimension && matriz[i , j+1] == 1)//Si solo hay una sala a la derecha
                     {
-                        Instantiate(sala1P, new Vector3(i * 180f, 10f, j * 180f), Quaternion.Euler(-90, -90, 0));
+                        Instantiate(sala1P, new Vector3(i * 90f, 10f, j * 90f), Quaternion.Euler(-0, -90, 0));
                     }
                     else if (j -1 > 0 && matriz[i, j -1] == 1)//Si solo hay una sala a la izquierda
                     {
-                        Instantiate(sala1P, new Vector3(i * 180f, 10f, j * 180f), Quaternion.Euler(-90, +90, 0));
+                        Instantiate(sala1P, new Vector3(i * 90f, 10f, j * 90f), Quaternion.Euler(-0, +90, 0));
                     }
                     else if (i + 1 < dimension && matriz[i +1 , j] == 1)//Si solo hay una sala a arriba
                     {
-                        Instantiate(sala1P, new Vector3(i * 180f, 10f, j * 180f), Quaternion.Euler(-90, 0, 0));
+                        Instantiate(sala1P, new Vector3(i * 90f, 10f, j * 90f), Quaternion.Euler(-0, 0, 0));
                     }
                     else if (i - 1 > 0 && matriz[i-1, j] == 1)//Si solo hay una sala abajo
                     {
-                        Instantiate(sala1P, new Vector3(i * 180f, 10f, j * 180f), Quaternion.Euler(-90, 180, 0));
+                        Instantiate(sala1P, new Vector3(i * 90f, 10f, j * 90f), Quaternion.Euler(-0, 180, 0));
                     }
                     
                 }
             }
         }
-        jugador.transform.position = new Vector3(2880f,10f, 2880f);
+        jugador.transform.position = new Vector3(1440f,10f, 1440f);
 
         
 
