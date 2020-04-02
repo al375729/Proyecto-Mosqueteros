@@ -11,7 +11,7 @@ public class Movimiento : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        moveSpeed = 75f;
+        //moveSpeed = 75f;
       
     }
 

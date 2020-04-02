@@ -21,6 +21,9 @@ public class DisparoJugador : MonoBehaviour
     public GameObject particulas;
     public Color colorFinalParticulas;
 
+    //Por si es necesario reducir la escala del jugador
+    private float adaptarEscala;
+
     private void Update()
     {
         if (Input.GetKey(KeyCode.Mouse0))
@@ -45,7 +48,7 @@ public class DisparoJugador : MonoBehaviour
         
         ParametrosGeneraBalas();
         
-        bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * bulletSpeed;
+        bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * bulletSpeed * adaptarEscala;
 
 
     }
@@ -79,6 +82,14 @@ public class DisparoJugador : MonoBehaviour
 
         //Añadir objeto de sistema de partículas a la bala
         part.transform.parent = bullet.transform;
+
+        //Por si hay que escalar el jugador para que se adapte al escenario
+        //La escala en la scene Pruebas es (5, 5, 5)
+        adaptarEscala = transform.localScale.x / 5;
+        bullet.transform.localScale =   new Vector3(adaptarEscala, adaptarEscala, adaptarEscala);
+        
+        part.transform.localScale =     new Vector3(adaptarEscala, adaptarEscala, adaptarEscala);
+
     }
 
     
