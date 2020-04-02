@@ -1069,6 +1069,13 @@ MonoBehaviour:
   sala2PSeparadas: {fileID: -927199367670048503, guid: 99696562fddd8034d9a3c0590910a8c7,
     type: 3}
   sala1P: {fileID: -927199367670048503, guid: 7e1585a4674d85c43989a3719fef53be, type: 3}
+  sala2: {fileID: 7497843783080267362, guid: 6113ea70a31359c40ab87c368a9aaa4e, type: 3}
+  sala3P2: {fileID: 2084898520156152547, guid: 1eb121b990afaf1489ccb2655b7745d7, type: 3}
+  sala2PJuntas2: {fileID: 682268580528369663, guid: 86db723269c9bbb49988b9a4c733b5d4,
+    type: 3}
+  sala2PSeparadas2: {fileID: 1207973302535016630, guid: 2064d6a8692b0d744b5b2fac4710fc77,
+    type: 3}
+  sala1P2: {fileID: 5039059884380737373, guid: 7495244210e3ba742ae9a12ec8296258, type: 3}
   jugador: {fileID: 1716680067}
 --- !u!4 &2008599050
 Transform:
@@ -1236,6 +1243,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4617932569854835139, guid: ffdb301a71bb6304f8f686dda3001f82,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4617932569854835139, guid: ffdb301a71bb6304f8f686dda3001f82,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4617932569854835139, guid: ffdb301a71bb6304f8f686dda3001f82,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffdb301a71bb6304f8f686dda3001f82, type: 3}
