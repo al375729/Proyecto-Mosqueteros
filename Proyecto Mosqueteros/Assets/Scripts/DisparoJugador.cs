@@ -20,6 +20,8 @@ public class DisparoJugador : MonoBehaviour
     //Sistema de partículas que acompaña a la bala
     public GameObject particulas;
     public Color colorFinalParticulas;
+    //Luz de la bala
+    public GameObject luzBala;
 
     //Por si es necesario reducir la escala del jugador
     private float adaptarEscala;
@@ -82,6 +84,11 @@ public class DisparoJugador : MonoBehaviour
 
         //Añadir objeto de sistema de partículas a la bala
         part.transform.parent = bullet.transform;
+
+        //Adicción de una luz de la bala
+        GameObject luz = Instantiate(luzBala, barrelEnd.position, barrelEnd.rotation);
+        luz.GetComponent<Light>().color = colorBala;
+        luz.transform.parent = bullet.transform;
 
         //Por si hay que escalar el jugador para que se adapte al escenario
         //La escala en la scene Pruebas es (5, 5, 5)

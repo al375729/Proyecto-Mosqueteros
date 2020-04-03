@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class ColisionesDisparo : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public float contador;
+    
+    void Awake()
     {
-        
+        contador = 3f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        contador -= Time.deltaTime;
+        if(contador <= 0)
+            Destroy(this.gameObject);
     }
     
     /*void OnCollisionEnter(UnityEngine.Collision collision)

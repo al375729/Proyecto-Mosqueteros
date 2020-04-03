@@ -27,10 +27,11 @@ public class GeneraBalas : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         //Obtener script DisparoJugador
         disparoJugador = GetComponent<DisparoJugador>();
+        Generar();
 
     }
 
@@ -40,28 +41,33 @@ public class GeneraBalas : MonoBehaviour
         //Al pulsar "E", se activa el cambio
         if(Input.GetKey(KeyCode.E))
         {
-            
-            //Selección del modelo
-            int seleccion = Random.Range(0, modelosPosibles.Length -1);
-            Debug.Log(seleccion);
-            GameObject nuevaBala = modelosPosibles[seleccion];
-
-            //Selección de color de la bala aleatorio
-            int h_aleatorio = Random.Range(0, seleccionColor.Length);
-            colorBala = seleccionColor[h_aleatorio];
-            disparoJugador.colorBala = colorBala;
-
-            //Segundo color aleatorio para las partículas
-            int segundoAleatorio = Random.Range(0, seleccionColor.Length);
-            disparoJugador.colorFinalParticulas = seleccionColor[segundoAleatorio];
-
-            //Velocidad de la bala
-            float velocidadBala = Random.Range(velocidad_min, velocidad_max);
-            disparoJugador.bulletSpeed = velocidadBala;
-
-            //Insertar bala generada en DisparoJugador
-            disparoJugador.theBullet = nuevaBala;
-            
+            Generar();
         }
+    }
+
+    void Generar()
+    {
+        
+        //Selección del modelo
+        int seleccion = Random.Range(0, modelosPosibles.Length -1);
+        Debug.Log(seleccion);
+        GameObject nuevaBala = modelosPosibles[seleccion];
+
+        //Selección de color de la bala aleatorio
+        int h_aleatorio = Random.Range(0, seleccionColor.Length);
+        colorBala = seleccionColor[h_aleatorio];
+        disparoJugador.colorBala = colorBala;
+
+        //Segundo color aleatorio para las partículas
+        int segundoAleatorio = Random.Range(0, seleccionColor.Length);
+        disparoJugador.colorFinalParticulas = seleccionColor[segundoAleatorio];
+
+        //Velocidad de la bala
+        float velocidadBala = Random.Range(velocidad_min, velocidad_max);
+        disparoJugador.bulletSpeed = velocidadBala;
+
+        //Insertar bala generada en DisparoJugador
+        disparoJugador.theBullet = nuevaBala;
+            
     }
 }
