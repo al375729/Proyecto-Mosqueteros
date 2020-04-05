@@ -5,6 +5,8 @@ ScriptsOnlyBuild:
     - ColisionesDisparo
     - ControlCamara
     - DisparoJugador
+    - EnemigoPerseguidor
+    - GeneraBalas
     - GeneradorDeNiveles
     - Movimiento
     Unity.Rider.Editor.dll:
@@ -13,6 +15,12 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
+    UnityEngine.UI.dll:
+    - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.Image
   sceneClasses:
     Assets/Scenes/Pruebas.unity:
     - Class: 1
@@ -35,6 +43,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
     - Class: 81
@@ -44,17 +54,31 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
+      Script: {instanceID: 11150}
+    - Class: 114
+      Script: {instanceID: 11346}
+    - Class: 114
       Script: {instanceID: 11440}
+    - Class: 114
+      Script: {instanceID: 11730}
     - Class: 114
       Script: {instanceID: 11820}
     - Class: 114
-      Script: {instanceID: 12194}
+      Script: {instanceID: 11998}
     - Class: 114
-      Script: {instanceID: 12392}
+      Script: {instanceID: 12196}
     - Class: 114
-      Script: {instanceID: 12722}
+      Script: {instanceID: 12306}
     - Class: 114
-      Script: {instanceID: 12902}
+      Script: {instanceID: 12396}
+    - Class: 114
+      Script: {instanceID: 12590}
+    - Class: 114
+      Script: {instanceID: 12726}
+    - Class: 114
+      Script: {instanceID: 12906}
+    - Class: 114
+      Script: {instanceID: 12942}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 134
@@ -66,6 +90,18 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -160,7 +196,7 @@ ScriptsOnlyBuild:
     className: GridLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 40d1a7b988e9c42afbe2df5ffe8ba26d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ColisionesDisparo
@@ -262,7 +298,7 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
-      Hash: ef6adcab186bfd4a4d994dddc4a09f03
+      Hash: bc80adda2a65392dbffc2afdb732a6d2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GeneradorDeNiveles
@@ -292,6 +328,12 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
+      Hash: bb3131caf78afa67aad30b9477ee8841
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemigoPerseguidor
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
@@ -316,7 +358,7 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: f7c5e02f44ae1d582cf3de26d0c1aae6
+      Hash: 7934888fa5516c5357538b9c617b71c7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DisparoJugador
@@ -338,6 +380,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalReceiver
+  - hash:
+      serializedVersion: 2
+      Hash: b9f43771143035253536049fc65b2a3c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GeneraBalas
   - hash:
       serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
@@ -412,7 +460,7 @@ ScriptsOnlyBuild:
     className: MarkerTrack
   - hash:
       serializedVersion: 2
-      Hash: 0a92c35b81f4f85eed8e39f91106e5e4
+      Hash: 237e832d068f439ded58bad2c9f68ec5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BossTroyano
@@ -527,4 +575,4 @@ ScriptsOnlyBuild:
   platform: 5
   scenePathNames:
   - Assets/Scenes/Pruebas.unity
-  playerPath: C:/Users/seycr/Desktop/Proyecto Mosqueteros.exe
+  playerPath: C:/Users/usuario/Documents/GitHub/Proyecto-Mosqueteros/Proyecto Mosqueteros.exe
