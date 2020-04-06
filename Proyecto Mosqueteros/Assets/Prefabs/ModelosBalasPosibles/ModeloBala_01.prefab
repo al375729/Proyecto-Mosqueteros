@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5840593500735947161}
   - component: {fileID: 6536633574765509412}
   - component: {fileID: -4440255203996579697}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ModeloBala_01
   m_TagString: Bala
   m_Icon: {fileID: 0}
@@ -107,6 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb8d05922f735d946af1f0b6fd05179d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  contador: 0
 --- !u!54 &-4440255203996579697
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -32,6 +32,8 @@ public class GeneraBalas : MonoBehaviour
         //Obtener script DisparoJugador
         disparoJugador = GetComponent<DisparoJugador>();
         Generar();
+        gameObject.layer = 8;
+        Physics.IgnoreLayerCollision(8, 9);
 
     }
 
@@ -39,10 +41,15 @@ public class GeneraBalas : MonoBehaviour
     void Update()
     {
         //Al pulsar "E", se activa el cambio
-        if(Input.GetKey(KeyCode.E))
+        if (Input.GetKey(KeyCode.E))
         {
             Generar();
         }
+
+
+           
+            
+        
     }
 
     void Generar()
@@ -52,7 +59,7 @@ public class GeneraBalas : MonoBehaviour
         int seleccion = Random.Range(0, modelosPosibles.Length -1);
         Debug.Log(seleccion);
         GameObject nuevaBala = modelosPosibles[seleccion];
-
+        nuevaBala.layer = 8;
         //Selección de color de la bala aleatorio
         int h_aleatorio = Random.Range(0, seleccionColor.Length);
         colorBala = seleccionColor[h_aleatorio];
