@@ -6,12 +6,14 @@ public class Movimiento : MonoBehaviour
 {
 
     public float moveSpeed;
+    Rigidbody rigid;
   
 
     // Use this for initialization
     void Start()
     {
         //moveSpeed = 75f;
+        rigid = GetComponent<Rigidbody>();
       
     }
 
@@ -19,6 +21,7 @@ public class Movimiento : MonoBehaviour
     void FixedUpdate()
     {
         transform.Translate(moveSpeed * Input.GetAxis("Horizontal") * Time.fixedDeltaTime, 0f, moveSpeed * Input.GetAxis("Vertical") * Time.fixedDeltaTime);
+
        
         
     }
