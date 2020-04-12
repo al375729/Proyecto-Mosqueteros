@@ -4770,7 +4770,7 @@ GameObject:
   - component: {fileID: 5854374731005829280}
   m_Layer: 8
   m_Name: PrefabDisparo
-  m_TagString: Bala
+  m_TagString: BalaEnemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

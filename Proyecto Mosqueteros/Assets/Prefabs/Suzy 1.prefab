@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 6663516302719445212}
   - component: {fileID: 4457837806197245909}
   - component: {fileID: 3902976373577247468}
+  - component: {fileID: 3428298807934304988}
+  - component: {fileID: 8170986877311737507}
   m_Layer: 0
   m_Name: Suzy 1
-  m_TagString: Untagged
+  m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -67,7 +69,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f72606e2c4e31ab4283c215f6ea41fda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destino: {fileID: 0}
+  rotationDamping: 2
+--- !u!136 &3428298807934304988
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7647896244375460559}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 2.73
+  m_Height: 6.49
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.92, z: 0}
+--- !u!54 &8170986877311737507
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7647896244375460559}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &8340547493867098856
 GameObject:
   m_ObjectHideFlags: 0

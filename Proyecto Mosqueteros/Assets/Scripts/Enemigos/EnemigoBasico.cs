@@ -36,6 +36,17 @@ public class NewBehaviourScript : MonoBehaviour
         agente.SetDestination(algo);
 
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Bala")
+        {
+
+            Destroy(other.gameObject);
+            Destroy(this.gameObject);
+
+        }
+    }
 }
 
 

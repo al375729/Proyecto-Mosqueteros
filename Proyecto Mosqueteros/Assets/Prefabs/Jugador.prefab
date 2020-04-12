@@ -195,7 +195,7 @@ GameObject:
   - component: {fileID: 4617932569854835143}
   m_Layer: 0
   m_Name: Jugador
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -252,6 +252,7 @@ MonoBehaviour:
   particulas: {fileID: 1979347214087123732, guid: c01916c45356ec14fa370700360570cb,
     type: 3}
   colorFinalParticulas: {r: 0, g: 0, b: 0, a: 0}
+  luzBala: {fileID: 0}
 --- !u!54 &4617932569854835142
 Rigidbody:
   m_ObjectHideFlags: 0
