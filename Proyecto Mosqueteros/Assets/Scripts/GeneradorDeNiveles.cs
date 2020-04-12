@@ -9,6 +9,7 @@ public class GeneradorDeNiveles : MonoBehaviour
 
     private int nivel = 0;
     private int dimension = 31;
+    public GameObject Pruebassssssss;
     public GameObject sala;
     public GameObject sala3P;
     public GameObject sala2PJuntas;
@@ -32,6 +33,7 @@ public class GeneradorDeNiveles : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        Instantiate(Pruebassssssss, new Vector3(0f, 0f, 0f), Quaternion.Euler(-90, 0, 0));
         matriz = new int[dimension + nivel, dimension + nivel];
         newRotation = Quaternion.Euler(-90, 0, 0);
 
@@ -336,6 +338,8 @@ public class GeneradorDeNiveles : MonoBehaviour
         }
 
     }
+
+
 }
 
 

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1610719764}
   - component: {fileID: 1610719766}
   - component: {fileID: 1610719765}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ParticulasDisparo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4768,7 +4768,7 @@ GameObject:
   - component: {fileID: 5854374731005829287}
   - component: {fileID: 5854374731005829283}
   - component: {fileID: 5854374731005829280}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PrefabDisparo
   m_TagString: Bala
   m_Icon: {fileID: 0}
@@ -4878,3 +4878,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb8d05922f735d946af1f0b6fd05179d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  contador: 0
