@@ -228,7 +228,7 @@ public class GeneradorDeNiveles : MonoBehaviour
                 }
             }
         }
-        //jugador.transform.position = new Vector3(1360f,13.5f, 1360f);
+        jugador.transform.position = new Vector3(1477F,174F, 1438F);
 
 
 
