@@ -37,16 +37,7 @@ public class NewBehaviourScript : MonoBehaviour
 
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Bala")
-        {
 
-            Destroy(other.gameObject);
-            Destroy(this.gameObject);
-
-        }
-    }
 }
 
 
