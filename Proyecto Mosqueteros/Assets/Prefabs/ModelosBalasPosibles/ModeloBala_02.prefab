@@ -108,6 +108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   contador: 0
+  "da\xF1o": 10
 --- !u!54 &-2707296659948221771
 Rigidbody:
   m_ObjectHideFlags: 0

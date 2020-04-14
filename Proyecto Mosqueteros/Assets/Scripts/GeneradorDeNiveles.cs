@@ -27,6 +27,9 @@ public class GeneradorDeNiveles : MonoBehaviour
     private int numSalas = 10;
     public Transform jugador;
 
+    static int numeroEnemigos;
+    static int nivel;
+
 
 
 

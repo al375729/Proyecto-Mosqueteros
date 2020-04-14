@@ -5,6 +5,7 @@ using UnityEngine;
 public class ColisionesDisparo : MonoBehaviour
 {
     public float contador;
+    public int daño = 10;
     
     void Awake()
     {
@@ -38,16 +39,6 @@ public class ColisionesDisparo : MonoBehaviour
 
         }
         
-        if (other.gameObject.tag == "Enemigo")
-        {
-            Destroy(this.gameObject);
-            Destroy(other.gameObject);
-
-        }
     }
 
-   
-
-
-    
 }
