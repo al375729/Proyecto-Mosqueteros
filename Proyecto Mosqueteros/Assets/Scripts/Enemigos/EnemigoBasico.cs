@@ -75,7 +75,11 @@ public class EnemigoBasico : MonoBehaviour
         vidaActual -= daño;
         vida.setHealth(vidaActual);
 
-        if(vidaActual == 0 ) Destroy(this.gameObject);
+        if (vidaActual == 0)
+        {
+            Destroy(this.gameObject);
+            GeneradorDeNiveles.numeroEnemigos--;
+        }
     }
     
 }

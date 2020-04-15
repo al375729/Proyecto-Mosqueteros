@@ -7,7 +7,7 @@ using System;
 public class GeneradorDeNiveles : MonoBehaviour
 {
 
-    private int nivel = 0;
+   
     private int dimension = 31;
     public GameObject Pruebassssssss;
     public GameObject sala;
@@ -27,8 +27,8 @@ public class GeneradorDeNiveles : MonoBehaviour
     private int numSalas = 10;
     public Transform jugador;
 
-    static int numeroEnemigos;
-    static int nivel;
+    public  static int numeroEnemigos = 2;
+    public static int nivel = 1;
 
 
 
