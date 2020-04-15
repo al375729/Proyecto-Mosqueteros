@@ -31,6 +31,7 @@ public class EnemigoBasico : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         float distance = Vector3.Distance(target.position, transform.position);
         if (distance <= distancia)
         {
@@ -80,6 +81,9 @@ public class EnemigoBasico : MonoBehaviour
             Destroy(this.gameObject);
             GeneradorDeNiveles.numeroEnemigos--;
         }
+    }
+    public static void actualizarVida() { 
+    
     }
     
 }

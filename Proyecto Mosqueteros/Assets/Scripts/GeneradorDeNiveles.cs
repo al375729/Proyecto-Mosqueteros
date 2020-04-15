@@ -8,7 +8,7 @@ public class GeneradorDeNiveles : MonoBehaviour
 {
 
    
-    private int dimension = 31;
+    private int dimension = 60;
     public GameObject Pruebassssssss;
     public GameObject sala;
     public GameObject sala3P;
@@ -24,11 +24,13 @@ public class GeneradorDeNiveles : MonoBehaviour
 
     private Quaternion newRotation;
     private int[,] matriz;
-    private int numSalas = 10;
+    private int numSalas = 10 + nivel;
     public Transform jugador;
 
     public  static int numeroEnemigos = 2;
     public static int nivel = 1;
+    private bool boss = false;
+    private List<GameObject> salas = new List<GameObject>();
 
 
 
@@ -37,7 +39,7 @@ public class GeneradorDeNiveles : MonoBehaviour
     void Awake()
     {
         Instantiate(Pruebassssssss, new Vector3(0f, 0f, 0f), Quaternion.Euler(-90, 0, 0));
-        matriz = new int[dimension + nivel, dimension + nivel];
+        matriz = new int[dimension , dimension ];
         newRotation = Quaternion.Euler(-90, 0, 0);
 
 
@@ -57,11 +59,44 @@ public class GeneradorDeNiveles : MonoBehaviour
         generate();
     }
 
+    void Update()
+    {
+        if (numeroEnemigos < 1 && boss == false)
+        {
+            boss = true;
+            batallaBoss();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            foreach (GameObject prefab in salas)
+            {
+                Destroy(prefab);
+            }
+            salas.Clear();
+        }
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            for (int i = 0; i < dimension; i += 1)
+            {
+                for (int j = 0; j < dimension; j += 1)
+                {
+                    matriz[i, j] = 0;
+                    //print(matriz[i, j]);
+                }
+            }
+            nivel++;
+            numSalas = 10 + nivel;
+            generate();
+        }
+    }
+
 
     void generate()
     {
         int ran;
-        int tamaño = dimension + nivel;
+        int tamaño = dimension;
         int medio1 = (int)Math.Round((tamaño / 2) + 0.5);
         int medio2 = medio1;
         int control = 0;
@@ -138,14 +173,17 @@ public class GeneradorDeNiveles : MonoBehaviour
                     if (i + 1 < dimension && matriz[i + 1, j] == 1 && j + 1 < dimension && matriz[i + 1, j] == 1 && i - 1 > 0 && matriz[i + 1, j] == 1 && j - 1 > dimension && matriz[i + 1, j] == 1)
                     //Si la sala esta rodeada por otras
                     {
-                        Instantiate(sala, new Vector3(i * 90f, 150f, j * 90f), newRotation);
+
+                        GameObject uno = (GameObject) Instantiate(sala, new Vector3(i * 90f, 150f, j * 90f), newRotation);
+                        salas.Add(uno);
 
                     }
 
                     else if ((i + 1 < dimension && matriz[i + 1, j] == 1) && j - 1 > 0 && matriz[i, j - 1] == 1 && j + 1 < dimension && matriz[i, j + 1] == 1)
                     //Si hay una sala arriba , una a la izquierda y una a la derecha
                     {
-                        Instantiate(sala3P, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 90, 0));
+                        GameObject uno = (GameObject) Instantiate(sala3P, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 90, 0));
+                        salas.Add(uno);
                     }
 
 
@@ -154,55 +192,64 @@ public class GeneradorDeNiveles : MonoBehaviour
                     else if ((i - 1 > 0 && matriz[i - 1, j] == 1) && j - 1 > 0 && matriz[i, j - 1] == 1 && j + 1 < dimension && matriz[i, j + 1] == 1)
                     //Si hay una sala abajo , una a la izquierda y una a la derecha
                     {
-                        Instantiate(sala3P, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, -90, 0));
+                        GameObject uno = (GameObject) Instantiate(sala3P, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, -90, 0));
+                        salas.Add(uno);
                     }
 
 
                     else if ((i - 1 > 0 && matriz[i - 1, j] == 1) && i + 1 < dimension && matriz[i + 1, j] == 1 && j + 1 < dimension && matriz[i, j + 1] == 1)
                     //Si hay una sala a la arriba , una abajo y una a la izquierda
                     {
-                        Instantiate(sala3P, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 0, 0));
+                        GameObject uno = (GameObject) Instantiate(sala3P, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 0, 0));
+                        salas.Add(uno);
                     }
 
                     else if ((i - 1 > 0 && matriz[i - 1, j] == 1) && i + 1 < dimension && matriz[i + 1, j] == 1 && j - 1 > 0 && matriz[i, j - 1] == 1)
                     //Si hay una sala a la arriba , una abajo y una a la derecha
                     {
-                        Instantiate(sala3P, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 180, 0));
+                        GameObject uno = (GameObject) Instantiate(sala3P, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 180, 0));
+                        salas.Add(uno);
                     }
 
                     else if ((i - 1 > 0 && matriz[i - 1, j] == 1) && i + 1 < dimension && matriz[i + 1, j] == 1)
                     //Si hay una sala a la arriba y una abajo
                     {
-                        Instantiate(sala2PSeparadas, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 0, 0));
+                        GameObject uno = (GameObject) Instantiate(sala2PSeparadas, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 0, 0));
+                        salas.Add(uno);
                     }
 
                     else if (j - 1 > 0 && matriz[i, j - 1] == 1 && j + 1 < dimension && matriz[i, j + 1] == 1)
                     //Si hay una sala a la derecha y una a la izquierda
                     {
-                        Instantiate(sala2PSeparadas, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 90, 0));
+                        GameObject uno = (GameObject) Instantiate(sala2PSeparadas, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 90, 0));
+                        salas.Add(uno);
                     }
 
                     else if (j - 1 > 0 && matriz[i, j - 1] == 1 && (i - 1 > 0 && matriz[i - 1, j] == 1))
                     //Si hay una sala a la derecha y una abajo
                     {
-                        Instantiate(sala2PJuntas, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 270, 0));
+                        GameObject uno = (GameObject) Instantiate(sala2PJuntas, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 270, 0));
+                        salas.Add(uno);
                     }
                     else if (j + 1 < dimension && matriz[i, j + 1] == 1 && (i - 1 > 0 && matriz[i - 1, j] == 1))
                     //Si hay una sala a la izquierda y una abajo
                     {
-                        Instantiate(sala2PJuntas, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 0, 0));
+                        GameObject uno = (GameObject) Instantiate(sala2PJuntas, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 0, 0));
+                        salas.Add(uno);
                     }
 
                     else if (j + 1 < dimension && matriz[i, j + 1] == 1 && (i + 1 < dimension && matriz[i + 1, j] == 1))
                     //Si hay una sala a la izquierda y una arriba
                     {
-                        Instantiate(sala2PJuntas, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 90, 0));
+                        GameObject uno = (GameObject) Instantiate(sala2PJuntas, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 90, 0));
+                        salas.Add(uno);
                     }
 
                     else if (j - 1 > 0 && matriz[i, j - 1] == 1 && (i + 1 < dimension && matriz[i + 1, j] == 1))
                     //Si hay una sala a la arriba y una a la derecha
                     {
-                        Instantiate(sala2PJuntas, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 180, 0));
+                        GameObject uno = (GameObject) Instantiate(sala2PJuntas, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 180, 0));
+                        salas.Add(uno);
                     }
 
 
@@ -210,32 +257,36 @@ public class GeneradorDeNiveles : MonoBehaviour
                     else if (j + 1 < dimension && matriz[i, j + 1] == 1)
                     //Si solo hay una sala a la derecha
                     {
-                        Instantiate(sala1P, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, -0, 0));
+                        GameObject uno = (GameObject) Instantiate(sala1P, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, -0, 0));
+                        salas.Add(uno);
                     }
                     else if (j - 1 > 0 && matriz[i, j - 1] == 1)
                     //Si solo hay una sala a la izquierda
                     {
-                        Instantiate(sala1P, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, +180, 0));
+                        GameObject uno = (GameObject) Instantiate(sala1P, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, +180, 0));
+                        salas.Add(uno);
                     }
                     else if (i + 1 < dimension && matriz[i + 1, j] == 1)
                     //Si solo hay una sala a arriba
                     {
-                        Instantiate(sala1P, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 90, 0));
+                        GameObject uno = (GameObject) Instantiate(sala1P, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 90, 0));
+                        salas.Add(uno);
                     }
                     else if (i - 1 > 0 && matriz[i - 1, j] == 1)
                     //Si solo hay una sala abajo
                     {
-                        Instantiate(sala1P, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 270, 0));
+                        GameObject uno = (GameObject) Instantiate(sala1P, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 270, 0));
+                        salas.Add(uno);
                     }
 
                 }
             }
         }
-        jugador.transform.position = new Vector3(1477F,174F, 1438F);
+        jugador.transform.position = new Vector3(2669.8f, 174F, 2685.3f);
 
 
 
-
+        /*
 
         for (int i = 0; i < dimension; i += 1)
         {
@@ -339,7 +390,14 @@ public class GeneradorDeNiveles : MonoBehaviour
                 }
             }
         }
+        */
+    }
 
+
+
+    void batallaBoss()
+    {
+        jugador.transform.position = new Vector3(1133f, 89f, -43f);
     }
 
 
