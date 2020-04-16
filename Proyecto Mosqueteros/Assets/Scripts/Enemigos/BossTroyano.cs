@@ -14,9 +14,10 @@ public class BossTroyano : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         caballo.transform.Rotate(0.0f, 1.0f, 0.0f, Space.Self);
+        
     }
 
     void OnTriggerEnter(Collider other)

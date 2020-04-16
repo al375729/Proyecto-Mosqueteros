@@ -31,6 +31,8 @@ public class GeneradorDeNiveles : MonoBehaviour
     public static int nivel = 1;
     private bool boss = false;
     private List<GameObject> salas = new List<GameObject>();
+    private Rigidbody rb;
+    public GameObject player;
 
 
 
@@ -41,6 +43,7 @@ public class GeneradorDeNiveles : MonoBehaviour
         Instantiate(Pruebassssssss, new Vector3(0f, 0f, 0f), Quaternion.Euler(-90, 0, 0));
         matriz = new int[dimension , dimension ];
         newRotation = Quaternion.Euler(-90, 0, 0);
+        rb = player.GetComponent<Rigidbody>();
 
 
 
@@ -76,20 +79,10 @@ public class GeneradorDeNiveles : MonoBehaviour
             salas.Clear();
         }
 
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            for (int i = 0; i < dimension; i += 1)
-            {
-                for (int j = 0; j < dimension; j += 1)
-                {
-                    matriz[i, j] = 0;
-                    //print(matriz[i, j]);
-                }
-            }
-            nivel++;
-            numSalas = 10 + nivel;
-            generate();
-        }
+        
+        
+            
+        
     }
 
 
@@ -282,7 +275,7 @@ public class GeneradorDeNiveles : MonoBehaviour
                 }
             }
         }
-        jugador.transform.position = new Vector3(2669.8f, 174F, 2685.3f);
+        //jugador.transform.position = new Vector3(2669.8f, 174F, 2685.3f);
 
 
 
@@ -398,9 +391,23 @@ public class GeneradorDeNiveles : MonoBehaviour
     void batallaBoss()
     {
         jugador.transform.position = new Vector3(1133f, 89f, -43f);
+        rb.velocity = Vector3.zero;
     }
 
-
+    void nextLevel()
+    {
+        for (int i = 0; i < dimension; i += 1)
+        {
+            for (int j = 0; j < dimension; j += 1)
+            {
+                matriz[i, j] = 0;
+                //print(matriz[i, j]);
+            }
+        }
+        nivel++;
+        numSalas = 10 + nivel;
+        generate();
+    }
 }
 
 
