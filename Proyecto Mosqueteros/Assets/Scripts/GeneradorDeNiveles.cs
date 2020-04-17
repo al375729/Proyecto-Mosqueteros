@@ -29,12 +29,13 @@ public class GeneradorDeNiveles : MonoBehaviour
 
     public  static int numeroEnemigos = 2;
     public static int nivel = 0;
-    private bool boss = false;
+    public static bool boss = false;
     private List<GameObject> salas = new List<GameObject>();
     private Rigidbody rb;
     public GameObject player;
 
     public static bool siguienteNivel = false;
+    public GameObject calavera;
 
 
 
@@ -42,6 +43,11 @@ public class GeneradorDeNiveles : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        numeroEnemigos = 2;
+        boss = false;
+        siguienteNivel = false;
+        nivel = 0;
+
         Instantiate(Pruebassssssss, new Vector3(0f, 0f, 0f), Quaternion.Euler(-90, 0, 0));
         matriz = new int[dimension , dimension ];
         newRotation = Quaternion.Euler(-90, 0, 0);
@@ -66,14 +72,16 @@ public class GeneradorDeNiveles : MonoBehaviour
 
     void Update()
     {
+        
         if (siguienteNivel)
         {
             siguienteNivel = false;
-            nextLevel();
+            nextLevel();        
         }
 
         if (numeroEnemigos < 1 && boss == false)
         {
+            Contadores.mostrar = false;
             boss = true;
             batallaBoss();
         }
@@ -83,6 +91,9 @@ public class GeneradorDeNiveles : MonoBehaviour
 
     void generate()
     {
+       
+        Contadores.mostrar = true;
+        numSalas = 10 + nivel;
         int ran;
         int tamaño = dimension;
         int medio1 = (int)Math.Round((tamaño / 2) + 0.5);
@@ -386,6 +397,7 @@ public class GeneradorDeNiveles : MonoBehaviour
     void batallaBoss()
     {
         jugador.transform.position = new Vector3(1133f, 89f, -43f);
+        Instantiate(calavera, new Vector3(1136f, 92f,-32f), Quaternion.Euler(-90, 180, 0));
         rb.velocity = Vector3.zero;
     }
 
@@ -409,8 +421,11 @@ public class GeneradorDeNiveles : MonoBehaviour
         generate();
         numeroEnemigos = 2;
         EnemigoBasico.cambioNivel = true;
+        EnemigoPerseguidor.cambioNivel1 = true;
+       
 
-        
+
+
         boss = false;
     }
 }

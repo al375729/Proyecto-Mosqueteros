@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EnemigoPerseguidor : MonoBehaviour
 {
-
-    public Transform Player;
+    private GameObject jugador;
+    private Transform Player;
     public int MoveSpeed = 40;
     public int MaxDist = 10;
     public int MinDist = 10;
@@ -17,13 +17,19 @@ public class EnemigoPerseguidor : MonoBehaviour
     public float waitBeforeNextShot = 0.5f;
     public Transform spawn;
     public float bulletSpeed = 50f;
-    public int vidaMax = 100;
+    public int vidaMax = 1;
     public int vidaActual;
     public Vida vida;
+    public static bool cambioNivel1 = false;
+    private Rigidbody rb;
 
 
     void Start()
     {
+        jugador = GameObject.FindWithTag("Player");
+        Player = jugador.GetComponent<Transform>();
+       
+
         vidaActual = vidaMax;
         vida.setMaxHealth(vidaMax);
     }
@@ -36,10 +42,15 @@ public class EnemigoPerseguidor : MonoBehaviour
            Vector3 mov = transform.forward;
            mov.y = 0.0f;
            transform.position += mov * MoveSpeed * Time.deltaTime;
+          
 
+        if (cambioNivel1)
+        {
+            cambioNivel1 = false;
+            setVida();
+        }
 
-
-            if (Shootable)
+        if (Shootable)
             {
 
 
@@ -85,7 +96,8 @@ public class EnemigoPerseguidor : MonoBehaviour
     }
     public void setVida()
     {
-        vidaActual = vidaMax + GeneradorDeNiveles.nivel*20;
+        vidaMax += 20;
+        vidaActual = vidaMax;
         vida.setMaxHealth(vidaMax);
     }
 }

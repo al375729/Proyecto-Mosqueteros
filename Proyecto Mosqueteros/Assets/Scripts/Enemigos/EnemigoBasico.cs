@@ -94,6 +94,7 @@ public class EnemigoBasico : MonoBehaviour
         vidaMax += 10;
         vidaActual = vidaMax;
         vida.setMaxHealth(vidaMax);
+        
     }
 
 }

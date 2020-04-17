@@ -55,6 +55,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Boton.cs" />
      <Compile Include="Assets\Scripts\ColisionesDisparo.cs" />
      <Compile Include="Assets\Scripts\Contadores.cs" />
      <Compile Include="Assets\Scripts\Enemigos\BossTroyano.cs" />
@@ -67,6 +68,8 @@
      <Compile Include="Assets\Scripts\Jugador\GeneraBalas.cs" />
      <Compile Include="Assets\Scripts\Jugador\Movimiento.cs" />
      <Compile Include="Assets\Scripts\Jugador\VidaJugador.cs" />
+     <Compile Include="Assets\Scripts\MenuPausa.cs" />
+     <Compile Include="Assets\Scripts\Pausa.cs" />
      <Compile Include="Assets\Scripts\Vida.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/seycr/Documents/GitHub/Proyecto-Mosqueteros/Proyecto Mosqueteros/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

@@ -8,6 +8,8 @@ TagManager:
   - Bala
   - BalaEnemigo
   - Enemigo
+  - Bass
+  - Boss
   layers:
   - Default
   - TransparentFX
