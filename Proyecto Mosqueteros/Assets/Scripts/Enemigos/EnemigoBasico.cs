@@ -7,7 +7,7 @@ public class EnemigoBasico : MonoBehaviour
 {
 
 
-    public int vidaMax = 30;
+    private int vidaMax = 30 + GeneradorDeNiveles.nivel * 10;
     public int vidaActual;
     public Vida vida;
     private UnityEngine.AI.NavMeshAgent agente;
@@ -15,6 +15,7 @@ public class EnemigoBasico : MonoBehaviour
     private GameObject jugador;
     private float distancia = 40f;
     public float rotationDamping = 2;
+    public static bool cambioNivel = false;
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +32,12 @@ public class EnemigoBasico : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (cambioNivel)
+        {
+            cambioNivel = false;
+            setVida();
+        }
+
         float distance = Vector3.Distance(target.position, transform.position);
         if (distance <= distancia)
         {
@@ -65,7 +71,7 @@ public class EnemigoBasico : MonoBehaviour
 
         if (other.gameObject.tag == "Bala")
         {
-            
+            Destroy(other);
             recibirDaño(10);
 
         }
@@ -82,10 +88,14 @@ public class EnemigoBasico : MonoBehaviour
             GeneradorDeNiveles.numeroEnemigos--;
         }
     }
-    public static void actualizarVida() { 
-    
+
+    public void setVida()
+    {
+        vidaMax += 10;
+        vidaActual = vidaMax;
+        vida.setMaxHealth(vidaMax);
     }
-    
+
 }
 
 

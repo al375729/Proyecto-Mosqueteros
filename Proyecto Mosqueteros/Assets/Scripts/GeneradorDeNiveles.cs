@@ -28,11 +28,13 @@ public class GeneradorDeNiveles : MonoBehaviour
     public Transform jugador;
 
     public  static int numeroEnemigos = 2;
-    public static int nivel = 1;
+    public static int nivel = 0;
     private bool boss = false;
     private List<GameObject> salas = new List<GameObject>();
     private Rigidbody rb;
     public GameObject player;
+
+    public static bool siguienteNivel = false;
 
 
 
@@ -64,25 +66,18 @@ public class GeneradorDeNiveles : MonoBehaviour
 
     void Update()
     {
+        if (siguienteNivel)
+        {
+            siguienteNivel = false;
+            nextLevel();
+        }
+
         if (numeroEnemigos < 1 && boss == false)
         {
             boss = true;
             batallaBoss();
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            foreach (GameObject prefab in salas)
-            {
-                Destroy(prefab);
-            }
-            salas.Clear();
-        }
-
-        
-        
-            
-        
     }
 
 
@@ -275,7 +270,7 @@ public class GeneradorDeNiveles : MonoBehaviour
                 }
             }
         }
-        //jugador.transform.position = new Vector3(2669.8f, 174F, 2685.3f);
+        jugador.transform.position = new Vector3(2669.8f, 174F, 2685.3f);
 
 
 
@@ -396,6 +391,11 @@ public class GeneradorDeNiveles : MonoBehaviour
 
     void nextLevel()
     {
+        foreach (GameObject prefab in salas)
+        {
+            Destroy(prefab);
+        }
+        salas.Clear();
         for (int i = 0; i < dimension; i += 1)
         {
             for (int j = 0; j < dimension; j += 1)
@@ -407,6 +407,11 @@ public class GeneradorDeNiveles : MonoBehaviour
         nivel++;
         numSalas = 10 + nivel;
         generate();
+        numeroEnemigos = 2;
+        EnemigoBasico.cambioNivel = true;
+
+        
+        boss = false;
     }
 }
 

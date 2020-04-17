@@ -38,7 +38,12 @@ public class ColisionesDisparo : MonoBehaviour
             Destroy(this.gameObject);
 
         }
-        
+        if (other.gameObject.tag == "Enemigo")
+        {
+            Destroy(this.gameObject);
+
+        }
+
     }
 
 }

@@ -10,30 +10,82 @@ public class EnemigoPerseguidor : MonoBehaviour
     public int MaxDist = 10;
     public int MinDist = 10;
 
-
+    private bool Shootable = true;
+    private GameObject bala;
+    public float shotInterval = 0.5f;
+    public GameObject projectile ;
+    public float waitBeforeNextShot = 0.5f;
+    public Transform spawn;
+    public float bulletSpeed = 50f;
+    public int vidaMax = 100;
+    public int vidaActual;
+    public Vida vida;
 
 
     void Start()
     {
-
+        vidaActual = vidaMax;
+        vida.setMaxHealth(vidaMax);
     }
 
     void Update()
     {
         transform.LookAt(Player);
 
-        if (Vector3.Distance(transform.position, Player.position) >= MinDist)
-        {
 
-            transform.position += transform.forward * MoveSpeed * Time.deltaTime;
+           Vector3 mov = transform.forward;
+           mov.y = 0.0f;
+           transform.position += mov * MoveSpeed * Time.deltaTime;
 
 
 
-            if (Vector3.Distance(transform.position, Player.position) <= MaxDist)
+            if (Shootable)
             {
-                //Here Call any function U want Like Shoot at here or something
+
+
+                Shootable = false;
+                StartCoroutine(ShootingYield());
+                Shoot();
+               
             }
 
+        
+    }
+    IEnumerator ShootingYield()
+    {
+        yield return new WaitForSeconds(waitBeforeNextShot);
+        Shootable = true;
+    }
+    void Shoot()
+    {
+        bala = Instantiate(projectile, spawn.position, spawn.rotation);
+        bala.GetComponent<Rigidbody>().velocity = bala.transform.forward * bulletSpeed;
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+
+        if (other.gameObject.tag == "Bala")
+        {
+
+            recibirDaño(10);
+
         }
+    }
+    void recibirDaño(int daño)
+    {
+        vidaActual -= daño;
+        vida.setHealth(vidaActual);
+
+        if (vidaActual == 0)
+        {
+            Destroy(this.gameObject);
+            GeneradorDeNiveles.siguienteNivel = true;
+        }
+    }
+    public void setVida()
+    {
+        vidaActual = vidaMax + GeneradorDeNiveles.nivel*20;
+        vida.setMaxHealth(vidaMax);
     }
 }

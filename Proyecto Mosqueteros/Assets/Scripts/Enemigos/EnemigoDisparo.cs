@@ -15,7 +15,7 @@ public class EnemigoDisparo : MonoBehaviour
 
     public float rotationDamping  = 2;
     private bool Shootable = true;
- public float shotInterval = 0.5f;
+    public float shotInterval = 0.5f;
   
     private GameObject bala;
     public float waitBeforeNextShot = 0.5f;
