@@ -63,6 +63,7 @@
      <Compile Include="Assets\Scripts\Enemigos\EnemigoBasico.cs" />
      <Compile Include="Assets\Scripts\Enemigos\EnemigoDisparo.cs" />
      <Compile Include="Assets\Scripts\Enemigos\EnemigoPerseguidor.cs" />
+     <Compile Include="Assets\Scripts\Enemigos\TorretaDisparo.cs" />
      <Compile Include="Assets\Scripts\GeneradorDeNiveles.cs" />
      <Compile Include="Assets\Scripts\Jugador\DisparoJugador.cs" />
      <Compile Include="Assets\Scripts\Jugador\GeneraBalas.cs" />
