@@ -10,6 +10,7 @@ TagManager:
   - Enemigo
   - Bass
   - Boss
+  - Aim
   layers:
   - Default
   - TransparentFX

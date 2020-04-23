@@ -20,7 +20,7 @@ public class ControlCamara : MonoBehaviour
 		float mouseY = Input.GetAxis("Mouse Y") * mouseSensibility * Time.fixedDeltaTime;
 
 		xRotation -= mouseY;
-		xRotation = Mathf.Clamp(xRotation, -30f, 10f);
+		xRotation = Mathf.Clamp(xRotation, -35f, 35f);
 
 		transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
 		brazo.transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);

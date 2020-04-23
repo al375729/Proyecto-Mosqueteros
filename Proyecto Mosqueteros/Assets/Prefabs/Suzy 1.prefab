@@ -109,7 +109,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 6.82}
+  m_AnchoredPosition: {x: -0.32, y: 5.36}
   m_SizeDelta: {x: 250.1, y: 80.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &5785776643957714915
@@ -272,7 +272,7 @@ RectTransform:
   m_GameObject: {fileID: 6320565355355079827}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 542028805995901214}
   - {fileID: 5978646495674059879}
@@ -417,7 +417,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc484c5484a5d924784ac77613a5b942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidaMax: 30
   vidaActual: 0
   vida: {fileID: 3732993963355785743}
   rotationDamping: 2

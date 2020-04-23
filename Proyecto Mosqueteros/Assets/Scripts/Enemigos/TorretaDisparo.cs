@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class TorretaDisparo : MonoBehaviour
 {
+
+    private int vidaMax = 30 + GeneradorDeNiveles.nivel * 10;
+    public int vidaActual;
+    public Vida vida;
+
     private Transform target ;
     private GameObject jugador;
 
     public GameObject projectile ;
     private Transform spawn;
-    public float maximumLookDistance  = 30;
-    public float maximumAttackDistance  = 10;
+    public float maximumLookDistance  = 50;
+    public float maximumAttackDistance  = 50;
     public float minimumDistanceFromPlayer  = 2;
     public float bulletSpeed = 200f;
 
@@ -23,22 +28,32 @@ public class TorretaDisparo : MonoBehaviour
 
     private Transform cannon;
     float lockPos = 0f;
-
+    public static bool cambioNivel2 = false;
     // Start is called before the first frame update
     void Start()
     {
-        jugador = GameObject.FindWithTag("Player");
+        jugador = GameObject.FindWithTag("Aim");
         target = jugador.GetComponent<Transform>();
 
         cannon = this.transform.GetChild(0);
         spawn = this.transform.GetChild(0).GetChild(0);
+
+        vidaActual = vidaMax;
+        vida.setMaxHealth(vidaMax);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (cambioNivel2)
+        {
+            cambioNivel2 = false;
+            setVida();
+        }
+
         float  distance = Vector3.Distance(target.position, transform.position);
-         if (distance <= maximumLookDistance)
+        
+        if (distance <= maximumLookDistance)
         {
             LookAtTarget();
 
@@ -81,5 +96,36 @@ public class TorretaDisparo : MonoBehaviour
     {
         bala = Instantiate(projectile, spawn.position, spawn.rotation);
         bala.GetComponent<Rigidbody>().velocity = bala.transform.forward * bulletSpeed ;
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+
+        if (other.gameObject.tag == "Bala")
+        {
+            Destroy(other);
+            recibirDaño(10);
+
+        }
+    }
+
+    void recibirDaño(int daño)
+    {
+        vidaActual -= daño;
+        vida.setHealth(vidaActual);
+
+        if (vidaActual == 0)
+        {
+            Destroy(this.gameObject);
+            GeneradorDeNiveles.numeroEnemigos--;
+        }
+    }
+
+    public void setVida()
+    {
+        vidaMax += 10;
+        vidaActual = vidaMax;
+        vida.setMaxHealth(vidaMax);
+
     }
 }

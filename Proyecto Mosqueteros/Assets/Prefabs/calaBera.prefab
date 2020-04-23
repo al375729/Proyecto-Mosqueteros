@@ -70,7 +70,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MoveSpeed: 10
   MaxDist: 10
-  MinDist: 10
+  MinDist: 20
   shotInterval: 5
   projectile: {fileID: 5854374731005829286, guid: abef448806284b34397c3906e8c8bcaf,
     type: 3}

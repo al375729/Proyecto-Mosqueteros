@@ -30,7 +30,7 @@ public class VidaJugador : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            recibirDaño(5);
+            recibirDaño(-5);
         }
         if (damaged)
         {

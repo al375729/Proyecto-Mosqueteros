@@ -27,7 +27,7 @@ public class GeneradorDeNiveles : MonoBehaviour
     private int numSalas = 10 + nivel;
     public Transform jugador;
 
-    public  static int numeroEnemigos = 2;
+    public  static int numeroEnemigos ;
     public static int nivel = 0;
     public static bool boss = false;
     private List<GameObject> salas = new List<GameObject>();
@@ -43,7 +43,7 @@ public class GeneradorDeNiveles : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        numeroEnemigos = 2;
+       
         boss = false;
         siguienteNivel = false;
         nivel = 0;
@@ -183,6 +183,7 @@ public class GeneradorDeNiveles : MonoBehaviour
                     {
                         GameObject uno = (GameObject) Instantiate(sala3P, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 90, 0));
                         salas.Add(uno);
+                        numeroEnemigos +=3 ;
                     }
 
 
@@ -193,6 +194,7 @@ public class GeneradorDeNiveles : MonoBehaviour
                     {
                         GameObject uno = (GameObject) Instantiate(sala3P, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, -90, 0));
                         salas.Add(uno);
+                        numeroEnemigos += 3;
                     }
 
 
@@ -201,6 +203,7 @@ public class GeneradorDeNiveles : MonoBehaviour
                     {
                         GameObject uno = (GameObject) Instantiate(sala3P, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 0, 0));
                         salas.Add(uno);
+                        numeroEnemigos += 3;
                     }
 
                     else if ((i - 1 > 0 && matriz[i - 1, j] == 1) && i + 1 < dimension && matriz[i + 1, j] == 1 && j - 1 > 0 && matriz[i, j - 1] == 1)
@@ -208,6 +211,7 @@ public class GeneradorDeNiveles : MonoBehaviour
                     {
                         GameObject uno = (GameObject) Instantiate(sala3P, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 180, 0));
                         salas.Add(uno);
+                        numeroEnemigos += 3;
                     }
 
                     else if ((i - 1 > 0 && matriz[i - 1, j] == 1) && i + 1 < dimension && matriz[i + 1, j] == 1)
@@ -215,6 +219,7 @@ public class GeneradorDeNiveles : MonoBehaviour
                     {
                         GameObject uno = (GameObject) Instantiate(sala2PSeparadas, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 0, 0));
                         salas.Add(uno);
+                        numeroEnemigos += 4;
                     }
 
                     else if (j - 1 > 0 && matriz[i, j - 1] == 1 && j + 1 < dimension && matriz[i, j + 1] == 1)
@@ -222,6 +227,7 @@ public class GeneradorDeNiveles : MonoBehaviour
                     {
                         GameObject uno = (GameObject) Instantiate(sala2PSeparadas, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 90, 0));
                         salas.Add(uno);
+                        numeroEnemigos += 4;
                     }
 
                     else if (j - 1 > 0 && matriz[i, j - 1] == 1 && (i - 1 > 0 && matriz[i - 1, j] == 1))
@@ -229,12 +235,14 @@ public class GeneradorDeNiveles : MonoBehaviour
                     {
                         GameObject uno = (GameObject) Instantiate(sala2PJuntas, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 270, 0));
                         salas.Add(uno);
+                        numeroEnemigos += 3;
                     }
                     else if (j + 1 < dimension && matriz[i, j + 1] == 1 && (i - 1 > 0 && matriz[i - 1, j] == 1))
                     //Si hay una sala a la izquierda y una abajo
                     {
                         GameObject uno = (GameObject) Instantiate(sala2PJuntas, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 0, 0));
                         salas.Add(uno);
+                        numeroEnemigos += 3;
                     }
 
                     else if (j + 1 < dimension && matriz[i, j + 1] == 1 && (i + 1 < dimension && matriz[i + 1, j] == 1))
@@ -242,6 +250,7 @@ public class GeneradorDeNiveles : MonoBehaviour
                     {
                         GameObject uno = (GameObject) Instantiate(sala2PJuntas, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 90, 0));
                         salas.Add(uno);
+                        numeroEnemigos += 3;
                     }
 
                     else if (j - 1 > 0 && matriz[i, j - 1] == 1 && (i + 1 < dimension && matriz[i + 1, j] == 1))
@@ -249,6 +258,7 @@ public class GeneradorDeNiveles : MonoBehaviour
                     {
                         GameObject uno = (GameObject) Instantiate(sala2PJuntas, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 180, 0));
                         salas.Add(uno);
+                        numeroEnemigos += 3;
                     }
 
 
@@ -258,24 +268,28 @@ public class GeneradorDeNiveles : MonoBehaviour
                     {
                         GameObject uno = (GameObject) Instantiate(sala1P, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, -0, 0));
                         salas.Add(uno);
+                        numeroEnemigos += 2;
                     }
                     else if (j - 1 > 0 && matriz[i, j - 1] == 1)
                     //Si solo hay una sala a la izquierda
                     {
                         GameObject uno = (GameObject) Instantiate(sala1P, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, +180, 0));
                         salas.Add(uno);
+                        numeroEnemigos += 2;
                     }
                     else if (i + 1 < dimension && matriz[i + 1, j] == 1)
                     //Si solo hay una sala a arriba
                     {
                         GameObject uno = (GameObject) Instantiate(sala1P, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 90, 0));
                         salas.Add(uno);
+                        numeroEnemigos += 2;
                     }
                     else if (i - 1 > 0 && matriz[i - 1, j] == 1)
                     //Si solo hay una sala abajo
                     {
                         GameObject uno = (GameObject) Instantiate(sala1P, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 270, 0));
                         salas.Add(uno);
+                        numeroEnemigos += 2;
                     }
 
                 }
@@ -419,7 +433,6 @@ public class GeneradorDeNiveles : MonoBehaviour
         nivel++;
         numSalas = 10 + nivel;
         generate();
-        numeroEnemigos = 2;
         EnemigoBasico.cambioNivel = true;
         EnemigoPerseguidor.cambioNivel1 = true;
        
