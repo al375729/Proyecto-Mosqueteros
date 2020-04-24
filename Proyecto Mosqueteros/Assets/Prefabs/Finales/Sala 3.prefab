@@ -247,6 +247,40 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 833372393483792207}
     m_Modifications:
+    - target: {fileID: 487021813, guid: 6cd905e78a444b247819dc7a28e95242, type: 3}
+      propertyPath: m_TagString
+      value: Stop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295200343, guid: 6cd905e78a444b247819dc7a28e95242, type: 3}
+      propertyPath: m_TagString
+      value: Stop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1385138734, guid: 6cd905e78a444b247819dc7a28e95242, type: 3}
+      propertyPath: m_TagString
+      value: Stop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1575858625, guid: 6cd905e78a444b247819dc7a28e95242, type: 3}
+      propertyPath: m_TagString
+      value: Stop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1675292123, guid: 6cd905e78a444b247819dc7a28e95242, type: 3}
+      propertyPath: m_TagString
+      value: Stop
+      objectReference: {fileID: 0}
+    - target: {fileID: 2009836635, guid: 6cd905e78a444b247819dc7a28e95242, type: 3}
+      propertyPath: m_TagString
+      value: Stop
+      objectReference: {fileID: 0}
+    - target: {fileID: 852773335308248038, guid: 6cd905e78a444b247819dc7a28e95242,
+        type: 3}
+      propertyPath: m_TagString
+      value: Stop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1945661912106636314, guid: 6cd905e78a444b247819dc7a28e95242,
+        type: 3}
+      propertyPath: m_TagString
+      value: Stop
+      objectReference: {fileID: 0}
     - target: {fileID: 4791930229259654919, guid: 6cd905e78a444b247819dc7a28e95242,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -302,10 +336,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5383296988144510697, guid: 6cd905e78a444b247819dc7a28e95242,
+        type: 3}
+      propertyPath: m_TagString
+      value: Stop
+      objectReference: {fileID: 0}
+    - target: {fileID: 5700782983367522658, guid: 6cd905e78a444b247819dc7a28e95242,
+        type: 3}
+      propertyPath: m_TagString
+      value: Stop
+      objectReference: {fileID: 0}
     - target: {fileID: 8420327224433747220, guid: 6cd905e78a444b247819dc7a28e95242,
         type: 3}
       propertyPath: m_Name
       value: 3-NO NAV + ENEMIGOS
+      objectReference: {fileID: 0}
+    - target: {fileID: 8512134975554573829, guid: 6cd905e78a444b247819dc7a28e95242,
+        type: 3}
+      propertyPath: m_TagString
+      value: Stop
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6cd905e78a444b247819dc7a28e95242, type: 3}

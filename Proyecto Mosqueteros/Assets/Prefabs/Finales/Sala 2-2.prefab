@@ -194,15 +194,70 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1005923885717710843, guid: 1caf567da5d68834897159146759bdc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Stop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1959551384223723186, guid: 1caf567da5d68834897159146759bdc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Stop
+      objectReference: {fileID: 0}
+    - target: {fileID: 3474705367017749775, guid: 1caf567da5d68834897159146759bdc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Stop
+      objectReference: {fileID: 0}
     - target: {fileID: 3824222049336638402, guid: 1caf567da5d68834897159146759bdc4,
         type: 3}
       propertyPath: m_Name
       value: 2-2cerrado NAV + ENEMIGOS
       objectReference: {fileID: 0}
+    - target: {fileID: 4925906715239556916, guid: 1caf567da5d68834897159146759bdc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Stop
+      objectReference: {fileID: 0}
+    - target: {fileID: 4925906715688520889, guid: 1caf567da5d68834897159146759bdc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Stop
+      objectReference: {fileID: 0}
+    - target: {fileID: 5219619112026993842, guid: 1caf567da5d68834897159146759bdc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Stop
+      objectReference: {fileID: 0}
+    - target: {fileID: 5594941840632774599, guid: 1caf567da5d68834897159146759bdc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Stop
+      objectReference: {fileID: 0}
+    - target: {fileID: 5834131393914455460, guid: 1caf567da5d68834897159146759bdc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Stop
+      objectReference: {fileID: 0}
     - target: {fileID: 5959827313411705166, guid: 1caf567da5d68834897159146759bdc4,
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6294087330372994076, guid: 1caf567da5d68834897159146759bdc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Stop
+      objectReference: {fileID: 0}
+    - target: {fileID: 7859089167531468948, guid: 1caf567da5d68834897159146759bdc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Stop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236702736657667362, guid: 1caf567da5d68834897159146759bdc4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Stop
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1caf567da5d68834897159146759bdc4, type: 3}

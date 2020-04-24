@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8517481533114804813}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Sala 2-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -327,6 +327,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8517481533114804813}
     m_Modifications:
+    - target: {fileID: 141231768, guid: eb1c50cebafa98441a4674f1d38f7d28, type: 3}
+      propertyPath: m_TagString
+      value: Stop
+      objectReference: {fileID: 0}
+    - target: {fileID: 164255427, guid: eb1c50cebafa98441a4674f1d38f7d28, type: 3}
+      propertyPath: m_TagString
+      value: Stop
+      objectReference: {fileID: 0}
+    - target: {fileID: 680966768, guid: eb1c50cebafa98441a4674f1d38f7d28, type: 3}
+      propertyPath: m_TagString
+      value: Stop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1113332444, guid: eb1c50cebafa98441a4674f1d38f7d28, type: 3}
+      propertyPath: m_TagString
+      value: Stop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1234818161, guid: eb1c50cebafa98441a4674f1d38f7d28, type: 3}
+      propertyPath: m_TagString
+      value: Stop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1345908524, guid: eb1c50cebafa98441a4674f1d38f7d28, type: 3}
+      propertyPath: m_TagString
+      value: Stop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1465077115, guid: eb1c50cebafa98441a4674f1d38f7d28, type: 3}
+      propertyPath: m_TagString
+      value: Stop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1710284551, guid: eb1c50cebafa98441a4674f1d38f7d28, type: 3}
+      propertyPath: m_TagString
+      value: Stop
+      objectReference: {fileID: 0}
     - target: {fileID: 4871049200662793252, guid: eb1c50cebafa98441a4674f1d38f7d28,
         type: 3}
       propertyPath: m_Name

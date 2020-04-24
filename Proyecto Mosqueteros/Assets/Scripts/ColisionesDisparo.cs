@@ -20,7 +20,7 @@ public class ColisionesDisparo : MonoBehaviour
             Destroy(this.gameObject);
     }
     
-    /*void OnCollisionEnter(UnityEngine.Collision collision)
+    void OnCollisionEnter(UnityEngine.Collision collision)
     {
         if (collision.gameObject.tag == "Stop")
         {
@@ -28,7 +28,7 @@ public class ColisionesDisparo : MonoBehaviour
             
         }
     }
-    */
+    
 
      void OnTriggerEnter(Collider other)
     {

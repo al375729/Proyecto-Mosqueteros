@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1298727821347130734}
   - component: {fileID: 6575613234185014522}
   m_Layer: 0
-  m_Name: 1-2cerrado NAV 1 1
+  m_Name: 1-2cerrado NAV + ENEMIGOS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 8564092895584092380}
   m_Layer: 0
   m_Name: ColliderDentro4
-  m_TagString: Untagged
+  m_TagString: Stop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -221,7 +221,7 @@ GameObject:
   - component: {fileID: 6517464513244646164}
   m_Layer: 0
   m_Name: ColliderDentro1
-  m_TagString: Untagged
+  m_TagString: Stop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -265,7 +265,7 @@ GameObject:
   - component: {fileID: 6055903223699954050}
   m_Layer: 0
   m_Name: ColliderParedConPuerta_2
-  m_TagString: Untagged
+  m_TagString: Stop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -309,7 +309,7 @@ GameObject:
   - component: {fileID: 3513987211303327785}
   m_Layer: 0
   m_Name: ColliderDentro2
-  m_TagString: Untagged
+  m_TagString: Stop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -353,7 +353,7 @@ GameObject:
   - component: {fileID: 1652918618773263857}
   m_Layer: 0
   m_Name: ColliderFuera1
-  m_TagString: Untagged
+  m_TagString: Stop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -397,7 +397,7 @@ GameObject:
   - component: {fileID: 3158389271576038590}
   m_Layer: 0
   m_Name: ColliderSuelo
-  m_TagString: Untagged
+  m_TagString: Stop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -441,7 +441,7 @@ GameObject:
   - component: {fileID: 792902554440929608}
   m_Layer: 0
   m_Name: ColliderDentro3
-  m_TagString: Untagged
+  m_TagString: Stop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -610,7 +610,7 @@ GameObject:
   - component: {fileID: 4976176554525007841}
   m_Layer: 0
   m_Name: ColliderFuera2
-  m_TagString: Untagged
+  m_TagString: Stop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -654,7 +654,7 @@ GameObject:
   - component: {fileID: 8187045965884578518}
   m_Layer: 0
   m_Name: ColliderFuera3
-  m_TagString: Untagged
+  m_TagString: Stop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
@@ -698,7 +698,7 @@ GameObject:
   - component: {fileID: 2180753458251111186}
   m_Layer: 0
   m_Name: ColliderParedConPuerta_1
-  m_TagString: Untagged
+  m_TagString: Stop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8

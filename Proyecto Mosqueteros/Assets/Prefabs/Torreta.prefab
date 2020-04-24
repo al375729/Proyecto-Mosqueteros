@@ -479,7 +479,7 @@ MonoBehaviour:
   maximumLookDistance: 50
   maximumAttackDistance: 40
   minimumDistanceFromPlayer: 2
-  bulletSpeed: 200
+  bulletSpeed: 100
   rotationDamping: 2
   shotInterval: 0.5
   waitBeforeNextShot: 0.5
