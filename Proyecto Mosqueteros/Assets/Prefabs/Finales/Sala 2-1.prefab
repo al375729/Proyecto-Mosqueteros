@@ -364,6 +364,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: 2-1cerrado NO NAV + ENEMIGOS
       objectReference: {fileID: 0}
+    - target: {fileID: 6603868580119771384, guid: eb1c50cebafa98441a4674f1d38f7d28,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6603868580119771384, guid: eb1c50cebafa98441a4674f1d38f7d28,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 44862bb36ee815c4f977f0e4bf07d6fe, type: 2}
     - target: {fileID: 8485389351136673335, guid: eb1c50cebafa98441a4674f1d38f7d28,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -490,7 +490,7 @@ GameObject:
   - component: {fileID: 6348877689024422087}
   - component: {fileID: 8716123611785905980}
   m_Layer: 0
-  m_Name: 1-1cerrado NAV
+  m_Name: 1-1cerrado NAV + ENEMIGOS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -551,7 +551,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 3028eedb52777b3488100589f0206b6f, type: 3}
+  - {fileID: 2100000, guid: 15c05dd7e3921cd4aa71502331657299, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
