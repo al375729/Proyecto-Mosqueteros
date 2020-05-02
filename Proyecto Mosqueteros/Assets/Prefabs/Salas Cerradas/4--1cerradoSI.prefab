@@ -276,7 +276,7 @@ GameObject:
   - component: {fileID: 6925793676328928082}
   - component: {fileID: 3684461043220774827}
   m_Layer: 0
-  m_Name: 4--1cerradoSI 1
+  m_Name: 4--1cerradoSI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -345,7 +345,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 5da28019bfc1a6b4b8de41deee5c699b, type: 3}
+  - {fileID: 2100000, guid: 715efe621d51f9f47b47346430e1bd8e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -553,7 +553,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 670224309865224971, guid: 0ae4569ddb98ce043a53c0b06b664d6f, type: 3}
+  - {fileID: 2100000, guid: 76c7178eada122d4b9d7cc6510a0d83c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -584,7 +584,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3077871691223019373}
   m_Layer: 0
-  m_Name: Sala 2-3 1
+  m_Name: Sala 2-3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

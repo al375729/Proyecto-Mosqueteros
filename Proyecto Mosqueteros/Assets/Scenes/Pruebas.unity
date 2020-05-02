@@ -1466,15 +1466,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4d75e95df27e7d44ac4f02662f7962d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pruebassssssss: {fileID: 6348877689024422080, guid: 948a5644c74a8c04eabfa0c3d9fd3a35,
+  Pruebassssssss: {fileID: 1056249644228933560, guid: a0708d5cf43dd894db37a087f8b395bc,
     type: 3}
-  sala: {fileID: 8999882080441073477, guid: 69e49111463daf448951f5978bdcc001, type: 3}
-  sala3P: {fileID: 9040607713072038420, guid: 48ec1afe01ba2554d9b160cca7464efd, type: 3}
-  sala2PJuntas: {fileID: 4108412915367658401, guid: f3e63773d487d6e4a8544f558629f88b,
+  sala: {fileID: 3106643443278039927, guid: a5fbde122595c644984a897d2e210b48, type: 3}
+  sala3P: {fileID: 2620487819805837995, guid: bcf26deebd4d58e42a3cb20ea4e41f7f, type: 3}
+  sala2PJuntas: {fileID: 468713308351504434, guid: 1d7a7e7a737c70d4eb0996278fafc590,
     type: 3}
   sala2PSeparadas: {fileID: 8517481533114804812, guid: 3884aa278251b14469caee6e6be2cdf7,
     type: 3}
-  sala1P: {fileID: 737134714992867762, guid: 7ffeef930bc3e394aa1ab2245d80e4a8, type: 3}
+  sala1P: {fileID: 2703900017591167684, guid: e666729e82600d442a2470f318578470, type: 3}
   sala2: {fileID: 7497843783080267362, guid: 6113ea70a31359c40ab87c368a9aaa4e, type: 3}
   sala3P2: {fileID: 2084898520156152547, guid: 1eb121b990afaf1489ccb2655b7745d7, type: 3}
   sala2PJuntas2: {fileID: 682268580528369663, guid: 86db723269c9bbb49988b9a4c733b5d4,
