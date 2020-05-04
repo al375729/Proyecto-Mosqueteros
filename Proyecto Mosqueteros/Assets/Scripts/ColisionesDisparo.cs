@@ -6,6 +6,10 @@ public class ColisionesDisparo : MonoBehaviour
 {
     public float contador;
     public int daño = 10;
+
+    public Color colorInicio = Color.white;
+    public Color colorFinal = Color.black;
+    public GameObject explosion;
     
     void Awake()
     {
@@ -24,6 +28,7 @@ public class ColisionesDisparo : MonoBehaviour
     {
         if (collision.gameObject.tag == "Stop")
         {
+            CrearExplosion();
             Destroy(this.gameObject);
             
         }
@@ -35,15 +40,33 @@ public class ColisionesDisparo : MonoBehaviour
 
         if (other.gameObject.tag == "Stop")
         {
+            CrearExplosion();
             Destroy(this.gameObject);
 
         }
         if (other.gameObject.tag == "Enemigo")
         {
+            CrearExplosion();
             Destroy(this.gameObject);
 
         }
 
+    }
+
+    void CrearExplosion()
+    {
+        GameObject explo = Instantiate(explosion, transform.position, transform.rotation);
+
+        var cambioColor = explo.GetComponent<ParticleSystem>().colorOverLifetime;
+        cambioColor.enabled = true;
+
+        Gradient gradient = new Gradient();
+        gradient.SetKeys(
+            new GradientColorKey[] { new GradientColorKey(colorInicio, 0.0f), new GradientColorKey(colorFinal, 1.0f) },
+            new GradientAlphaKey[] { new GradientAlphaKey(1.0f, 0.0f), new GradientAlphaKey(0.0f, 1.0f) }
+        );
+
+        cambioColor.color = new ParticleSystem.MinMaxGradient(gradient);
     }
 
 }

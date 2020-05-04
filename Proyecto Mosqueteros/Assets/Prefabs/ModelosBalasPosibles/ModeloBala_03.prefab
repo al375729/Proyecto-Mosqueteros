@@ -107,6 +107,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb8d05922f735d946af1f0b6fd05179d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  contador: 0
+  "da\xF1o": 10
+  colorInicio: {r: 1, g: 1, b: 1, a: 1}
+  colorFinal: {r: 0, g: 0, b: 0, a: 1}
+  explosion: {fileID: 8174450708578861299, guid: 005da9a945e1b94438d208784290a3af,
+    type: 3}
 --- !u!54 &8771303659327550412
 Rigidbody:
   m_ObjectHideFlags: 0

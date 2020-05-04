@@ -55,6 +55,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Autodestruir.cs" />
      <Compile Include="Assets\Scripts\Boton.cs" />
      <Compile Include="Assets\Scripts\ColisionesDisparo.cs" />
      <Compile Include="Assets\Scripts\Contadores.cs" />

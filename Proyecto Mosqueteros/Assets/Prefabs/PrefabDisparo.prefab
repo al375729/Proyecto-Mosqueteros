@@ -4880,3 +4880,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contador: 0
   "da\xF1o": 10
+  colorInicio: {r: 1, g: 0.8926479, b: 0, a: 1}
+  colorFinal: {r: 1, g: 0, b: 0, a: 1}
+  explosion: {fileID: 8174450708578861299, guid: 005da9a945e1b94438d208784290a3af,
+    type: 3}

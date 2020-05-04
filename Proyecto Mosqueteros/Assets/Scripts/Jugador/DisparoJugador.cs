@@ -97,6 +97,10 @@ public class DisparoJugador : MonoBehaviour
         
         part.transform.localScale =     new Vector3(adaptarEscala, adaptarEscala, adaptarEscala);
 
+        //Añadir colores a la explosión de bala
+        bullet.GetComponent<ColisionesDisparo>().colorInicio = colorBala;
+        bullet.GetComponent<ColisionesDisparo>().colorFinal = colorFinalParticulas;
+
     }
 
     
