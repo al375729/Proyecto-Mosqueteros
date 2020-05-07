@@ -420,6 +420,7 @@ MonoBehaviour:
   vidaActual: 0
   vida: {fileID: 3732993963355785743}
   rotationDamping: 2
+  Paquete: {fileID: 6223733665201404742, guid: 45b7dfbbbd15c7a4ea7c2590c6cc1878, type: 3}
 --- !u!136 &3428298807934304988
 CapsuleCollider:
   m_ObjectHideFlags: 0

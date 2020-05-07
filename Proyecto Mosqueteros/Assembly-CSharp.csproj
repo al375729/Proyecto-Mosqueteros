@@ -71,6 +71,7 @@
      <Compile Include="Assets\Scripts\Jugador\Movimiento.cs" />
      <Compile Include="Assets\Scripts\Jugador\VidaJugador.cs" />
      <Compile Include="Assets\Scripts\MenuPausa.cs" />
+     <Compile Include="Assets\Scripts\PaqueteBalas.cs" />
      <Compile Include="Assets\Scripts\Pausa.cs" />
      <Compile Include="Assets\Scripts\Vida.cs" />
  <Reference Include="Unity.Timeline.Editor">

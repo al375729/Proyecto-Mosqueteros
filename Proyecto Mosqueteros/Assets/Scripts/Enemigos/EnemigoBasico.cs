@@ -17,6 +17,9 @@ public class EnemigoBasico : MonoBehaviour
     public float rotationDamping = 2;
     public static bool cambioNivel = false;
 
+    public static int cuentaParaPaquete = 3;
+    public GameObject Paquete;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -86,6 +89,14 @@ public class EnemigoBasico : MonoBehaviour
         {
             Destroy(this.gameObject);
             GeneradorDeNiveles.numeroEnemigos--;
+
+            cuentaParaPaquete--;
+            Debug.Log(cuentaParaPaquete);
+            if(cuentaParaPaquete<=0)
+            {
+                NuevoPaquete();
+                cuentaParaPaquete = 3;
+            }
         }
     }
 
@@ -97,7 +108,25 @@ public class EnemigoBasico : MonoBehaviour
         
     }
 
+    public void NuevoPaquete()
+    {
+        Debug.Log("Crear nuevo paquete");
+
+        GameObject nuevoPaquete = Instantiate(Paquete, transform.position, transform.rotation);
+        PaqueteBalas pb = nuevoPaquete.GetComponent<PaqueteBalas>();
+
+        pb.selectBala =             Random.Range(0, pb.modelosPosibles.Length - 1);
+        pb.selectPrimerColor =      Random.Range(0, pb.seleccionColor.Length - 1);
+        pb.selectSegundoColor =     Random.Range(0, pb.seleccionColor.Length - 1);
+        pb.velocidadBala=           Random.Range(pb.velocidad_min, pb.velocidad_max);
+
+
+
+    }
+
 }
+
+
 
 
 
