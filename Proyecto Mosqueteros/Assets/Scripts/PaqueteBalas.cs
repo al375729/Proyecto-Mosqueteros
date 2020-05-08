@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PaqueteBalas : MonoBehaviour
 {
@@ -14,11 +15,16 @@ public class PaqueteBalas : MonoBehaviour
     public int selectSegundoColor;
     public float velocidadBala;
 
+    Text texto;
+
 
     // Start is called before the first frame update
     void Awake()
     {
-        
+        transform.position = new Vector3(transform.position.x, transform.position.y + 3, transform.position.z);
+
+        texto = this.gameObject.transform.GetChild(0).GetChild(0).GetComponent<Text>();
+        texto.text = "CAMBIADO";
     }
 
     // Update is called once per frame

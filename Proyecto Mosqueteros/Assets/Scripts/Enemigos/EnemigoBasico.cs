@@ -91,7 +91,7 @@ public class EnemigoBasico : MonoBehaviour
             GeneradorDeNiveles.numeroEnemigos--;
 
             cuentaParaPaquete--;
-            Debug.Log(cuentaParaPaquete);
+            //Debug.Log(cuentaParaPaquete);
             if(cuentaParaPaquete<=0)
             {
                 NuevoPaquete();
@@ -110,7 +110,7 @@ public class EnemigoBasico : MonoBehaviour
 
     public void NuevoPaquete()
     {
-        Debug.Log("Crear nuevo paquete");
+        //Debug.Log("Crear nuevo paquete");
 
         GameObject nuevoPaquete = Instantiate(Paquete, transform.position, transform.rotation);
         PaqueteBalas pb = nuevoPaquete.GetComponent<PaqueteBalas>();
