@@ -41,10 +41,10 @@ public class GeneraBalas : MonoBehaviour
     void Update()
     {
         //Al pulsar "E", se activa el cambio
-        if (Input.GetKey(KeyCode.E))
+        /*if (Input.GetKey(KeyCode.E))
         {
             Generar();
-        }
+        }*/
 
 
            
@@ -75,6 +75,10 @@ public class GeneraBalas : MonoBehaviour
 
         //Insertar bala generada en DisparoJugador
         disparoJugador.theBullet = nuevaBala;
+
+        GameObject armaJugador = this.gameObject.transform.GetChild(2).GetChild(0).GetChild(0).GetChild(0).gameObject;
+        armaJugador.GetComponent<Renderer>().materials[1].SetColor("_Color", colorBala);
+        Debug.Log("P");
             
     }
 }

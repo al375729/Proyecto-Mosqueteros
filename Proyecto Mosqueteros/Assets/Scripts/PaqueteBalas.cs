@@ -16,21 +16,35 @@ public class PaqueteBalas : MonoBehaviour
     public float velocidadBala;
 
     Text texto;
+    Renderer rendi;
 
 
     // Start is called before the first frame update
     void Awake()
     {
         transform.position = new Vector3(transform.position.x, transform.position.y + 3, transform.position.z);
+        
+        rendi = GetComponent<Renderer>();
+        //GetComponent<Renderer>().material.SetColor("_Color", seleccionColor[selectPrimerColor]);
+        //GetComponent<Renderer>().material.SetColor("_EmissionColor", seleccionColor[selectPrimerColor]);
 
-        texto = this.gameObject.transform.GetChild(0).GetChild(0).GetComponent<Text>();
-        texto.text = "CAMBIADO";
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        string modeloBala;
+        if(selectBala==0)       modeloBala = "CUBO";
+        else if(selectBala==1)  modeloBala = "ARO";
+        else                    modeloBala = "BOLA";
+
+        texto = this.gameObject.transform.GetChild(0).GetChild(0).GetComponent<Text>();
+        texto.text =    "Modelo bala:\t"+modeloBala+"\n"+
+                        "Velocidad disparo:\t"+velocidadBala.ToString("F2");
+    
+        rendi.material.SetColor("_Color", seleccionColor[selectPrimerColor]);
+        rendi.material.EnableKeyword("_EMISSION");
+        rendi.material.SetColor("_EmissionColor", seleccionColor[selectPrimerColor]);
     }
 
     private void OnTriggerEnter(Collider other) 
@@ -52,6 +66,9 @@ public class PaqueteBalas : MonoBehaviour
             //Insertar bala en DisparoJugador
             dp.theBullet = nuevaBala;
 
+            //Cambiar color pistola (caprichito mio XD)
+            GameObject armaJugador = other.gameObject.transform.GetChild(2).GetChild(0).GetChild(0).GetChild(0).gameObject;
+            armaJugador.GetComponent<Renderer>().materials[1].SetColor("_Color", seleccionColor[selectPrimerColor]);
             
             //Fin
             Destroy(gameObject);

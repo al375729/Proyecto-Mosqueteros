@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class DisparoJugador : MonoBehaviour
 {
-
     public GameObject theBullet;
     public Transform barrelEnd;
 
@@ -26,6 +25,14 @@ public class DisparoJugador : MonoBehaviour
     //Por si es necesario reducir la escala del jugador
     private float adaptarEscala;
 
+    //Dirección de la arma del jugador para cambiarle el material
+    [HideInInspector] public GameObject armaJugador;
+    
+    private void Awake() 
+    {
+        //armaJugador = this.gameObject.transform.GetChild(2).GetChild(0).GetChild(0).GetChild(0).gameObject;
+    }
+    
     private void Update()
     {
         if (Input.GetKey(KeyCode.Mouse0))
