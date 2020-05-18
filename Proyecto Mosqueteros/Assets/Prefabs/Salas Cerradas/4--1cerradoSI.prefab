@@ -1077,10 +1077,55 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2109472536473680228}
     m_Modifications:
+    - target: {fileID: 104527021353775068, guid: 8b1f854cee831be4789fadbb1a5b31cf,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 104527021481779759, guid: 8b1f854cee831be4789fadbb1a5b31cf,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 104527021722603713, guid: 8b1f854cee831be4789fadbb1a5b31cf,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 104527021896111474, guid: 8b1f854cee831be4789fadbb1a5b31cf,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 104527021942731987, guid: 8b1f854cee831be4789fadbb1a5b31cf,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 104527022206444656, guid: 8b1f854cee831be4789fadbb1a5b31cf,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 104527022247446990, guid: 8b1f854cee831be4789fadbb1a5b31cf,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 104527022395973761, guid: 8b1f854cee831be4789fadbb1a5b31cf,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 104527022418690948, guid: 8b1f854cee831be4789fadbb1a5b31cf,
         type: 3}
       propertyPath: m_Name
       value: "Ca\xF1on"
+      objectReference: {fileID: 0}
+    - target: {fileID: 104527022418690948, guid: 8b1f854cee831be4789fadbb1a5b31cf,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 104527022418690949, guid: 8b1f854cee831be4789fadbb1a5b31cf,
         type: 3}
@@ -1146,6 +1191,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 104527022529154318, guid: 8b1f854cee831be4789fadbb1a5b31cf,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b1f854cee831be4789fadbb1a5b31cf, type: 3}
