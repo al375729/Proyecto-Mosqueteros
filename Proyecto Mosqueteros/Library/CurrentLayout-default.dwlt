@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 492}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -114,10 +114,10 @@ MonoBehaviour:
     y: 30
     width: 1536
     height: 731
-  m_MinSize: {x: 781, y: 442}
-  m_MaxSize: {x: 16006, y: 8042}
+  m_MinSize: {x: 909, y: 442}
+  m_MaxSize: {x: 22004, y: 10021}
   vertical: 0
-  controlID: 59
+  controlID: 125
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -137,8 +137,8 @@ MonoBehaviour:
     y: 0
     width: 238
     height: 731
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 442}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 60
+  controlID: 126
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -233,7 +233,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -242,14 +242,14 @@ MonoBehaviour:
     y: 0
     width: 270
     height: 731
-  m_MinSize: {x: 102, y: 121}
-  m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 19}
+  m_MinSize: {x: 232, y: 271}
+  m_MaxSize: {x: 10002, y: 10021}
+  m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
   - {fileID: 19}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -269,8 +269,8 @@ MonoBehaviour:
     y: 0
     width: 311
     height: 731
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -422,20 +422,20 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: ce42ffff324affff3e4affff444affff2e4bffff364bffff384bffff4c4bffff504bffff0e57ffff4259ffff4859ffffb270ffffdc78fffff678ffff567effff5c7effff5e7effff98b3ffff
+      m_SelectedIDs: 5e340000
+      m_LastClickedID: 13406
+      m_ExpandedIDs: 1618fdffa218fdff0419fdff583afdff763afdffd03afdff24e0fdff24e1fdff7607feff86d4feff8ed4feffbad4feff66d5feff60e8feff64e8feff68e8feff74e8feff8ce8feff24e9feff28e9feffda2bffffe62bffff724effff96b6ffff5ab7ffff68b7ffff86b7ffff72fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: calaBera
-        m_OriginalName: calaBera
+        m_Name: Suzy 1
+        m_OriginalName: Suzy 1
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -34570
+        m_UserData: -190314
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0
@@ -484,9 +484,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0, y: 0.36840898, z: -0.6270918}
+    m_Target: {x: 1154, y: 92, z: -135.6}
     speed: 2
-    m_Value: {x: 0, y: 0.36840898, z: -0.6270918}
+    m_Value: {x: 1153.9999, y: 91.99999, z: -135.6}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -532,13 +532,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.019176973, y: 0.97970086, z: -0.16253346, w: 0.11576442}
+    m_Target: {x: 0.09932904, y: 0.87798834, z: -0.20790407, w: 0.4195985}
     speed: 2
-    m_Value: {x: 0.019176973, y: 0.97970086, z: -0.16253346, w: 0.11576442}
+    m_Value: {x: 0.09932821, y: 0.877981, z: -0.20790234, w: 0.419595}
   m_Size:
-    m_Target: 9.142726
+    m_Target: 263.6294
     speed: 2
-    m_Value: 9.142726
+    m_Value: 252.27693
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -610,23 +610,23 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1838
-    y: 525
-    width: 854
-    height: 474
+    x: 238.40001
+    y: 456
+    width: 715
+    height: 327
   m_ViewDataDictionary: {fileID: 0}
   m_ViewTransforms:
     m_KeySerializationHelper:
     - {fileID: -3956734139569991326, guid: 7cb6684283d358846af825d03597a022, type: 2}
     m_ValueSerializationHelper:
-    - e00: 1
+    - e00: 0.2908215
       e01: 0
       e02: 0
-      e03: 0
+      e03: 128.24362
       e10: 0
-      e11: 1
+      e11: 0.2908215
       e12: 0
-      e13: 0
+      e13: 106.879395
       e20: 0
       e21: 0
       e22: 1
@@ -692,11 +692,11 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/EnemigosConLOD
+    - Assets/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Prefabs/EnemigosConLOD
+  - Assets/Prefabs
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\usuario\Documents\GitHub\Proyecto-Mosqueteros\Proyecto
     Mosqueteros
@@ -704,9 +704,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 265a0000
-    m_LastClickedID: 23078
-    m_ExpandedIDs: 00000000b84d0000ba4d0000bc4d0000be4d000000ca9a3b
+    m_SelectedIDs: ae3e0000
+    m_LastClickedID: 16046
+    m_ExpandedIDs: 00000000aa3e0000ac3e0000ae3e0000b03e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -734,7 +734,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000b84d0000ba4d0000bc4d0000be4d0000
+    m_ExpandedIDs: 00000000aa3e0000ac3e0000ae3e0000b03e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -765,18 +765,18 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: c62300000037000004340000303400002a3400001a640000000000006a4d00002c380000a25d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: ModelosConLOD
-      m_OriginalName: ModelosConLOD
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 23344
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
