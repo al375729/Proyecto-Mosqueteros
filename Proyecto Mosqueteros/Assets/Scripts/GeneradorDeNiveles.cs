@@ -3,24 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-
 public class GeneradorDeNiveles : MonoBehaviour
 {
+     private int dimension = 60;
 
-   
-    private int dimension = 60;
     public GameObject Pruebassssssss;
     public GameObject sala;
     public GameObject sala3P;
     public GameObject sala2PJuntas;
-    public GameObject sala2PSeparadas;
-    public GameObject sala1P;
+    public GameObject sala2PJuntasB;
+    public GameObject sala2PSeparadasA;
+    public GameObject sala2PSeparadasB;
+    public GameObject sala1PA;
+    public GameObject sala1PB;
 
-    public GameObject sala2;
-    public GameObject sala3P2;
-    public GameObject sala2PJuntas2;
-    public GameObject sala2PSeparadas2;
-    public GameObject sala1P2;
+    public GameObject LuzGeneral;
+
+    //public GameObject sala2;
+    //public GameObject sala3P2;
+    //public GameObject sala2PJuntas2;
+    //public GameObject sala2PSeparadas2;
+    //public GameObject sala1P2;
 
     private Quaternion newRotation;
     private int[,] matriz;
@@ -47,12 +50,13 @@ public class GeneradorDeNiveles : MonoBehaviour
         boss = false;
         siguienteNivel = false;
         nivel = 0;
+        //LuzGeneral.SetActive(true);
 
         Instantiate(Pruebassssssss, new Vector3(0f, 0f, 0f), Quaternion.Euler(-90, 0, 0));
         matriz = new int[dimension , dimension ];
         newRotation = Quaternion.Euler(-90, 0, 0);
         rb = player.GetComponent<Rigidbody>();
-
+        
 
 
 
@@ -91,7 +95,7 @@ public class GeneradorDeNiveles : MonoBehaviour
 
     void generate()
     {
-       
+        LuzGeneral.SetActive(true);
         Contadores.mostrar = true;
         numSalas = 10 + nivel;
         int ran;
@@ -184,6 +188,7 @@ public class GeneradorDeNiveles : MonoBehaviour
                         GameObject uno = (GameObject) Instantiate(sala3P, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 90, 0));
                         salas.Add(uno);
                         numeroEnemigos +=3 ;
+                        Debug.Log(numeroEnemigos);
                     }
 
 
@@ -195,6 +200,7 @@ public class GeneradorDeNiveles : MonoBehaviour
                         GameObject uno = (GameObject) Instantiate(sala3P, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, -90, 0));
                         salas.Add(uno);
                         numeroEnemigos += 3;
+                        Debug.Log(numeroEnemigos);
                     }
 
 
@@ -204,6 +210,7 @@ public class GeneradorDeNiveles : MonoBehaviour
                         GameObject uno = (GameObject) Instantiate(sala3P, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 0, 0));
                         salas.Add(uno);
                         numeroEnemigos += 3;
+                        Debug.Log(numeroEnemigos);
                     }
 
                     else if ((i - 1 > 0 && matriz[i - 1, j] == 1) && i + 1 < dimension && matriz[i + 1, j] == 1 && j - 1 > 0 && matriz[i, j - 1] == 1)
@@ -212,53 +219,126 @@ public class GeneradorDeNiveles : MonoBehaviour
                         GameObject uno = (GameObject) Instantiate(sala3P, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 180, 0));
                         salas.Add(uno);
                         numeroEnemigos += 3;
+                        Debug.Log(numeroEnemigos);
                     }
 
                     else if ((i - 1 > 0 && matriz[i - 1, j] == 1) && i + 1 < dimension && matriz[i + 1, j] == 1)
                     //Si hay una sala a la arriba y una abajo
                     {
-                        GameObject uno = (GameObject) Instantiate(sala2PSeparadas, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 0, 0));
-                        salas.Add(uno);
-                        numeroEnemigos += 4;
+                        int probar = UnityEngine.Random.Range(0, 10);
+                        if(probar%2==0)
+                        {
+                            GameObject uno = (GameObject) Instantiate(sala2PSeparadasA, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 0, 0));
+                            salas.Add(uno);
+                            numeroEnemigos += 4;
+                        Debug.Log(numeroEnemigos);
+                        }
+                        else
+                        {
+                            GameObject uno = (GameObject) Instantiate(sala2PSeparadasB, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 0, 0));
+                            salas.Add(uno);
+                            numeroEnemigos += 3;
+                        Debug.Log(numeroEnemigos);
+                        }
                     }
 
                     else if (j - 1 > 0 && matriz[i, j - 1] == 1 && j + 1 < dimension && matriz[i, j + 1] == 1)
                     //Si hay una sala a la derecha y una a la izquierda
                     {
-                        GameObject uno = (GameObject) Instantiate(sala2PSeparadas, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 90, 0));
-                        salas.Add(uno);
-                        numeroEnemigos += 4;
+                        int probar = UnityEngine.Random.Range(0, 10);
+                        if(probar%2==0)
+                        {
+                            GameObject uno = (GameObject) Instantiate(sala2PSeparadasA, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 90, 0));
+                            salas.Add(uno);
+                            numeroEnemigos += 4;
+                        Debug.Log(numeroEnemigos);
+                        }
+                        else
+                        {
+                            GameObject uno = (GameObject) Instantiate(sala2PSeparadasB, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 90, 0));
+                            salas.Add(uno);
+                            numeroEnemigos += 3;
+                        Debug.Log(numeroEnemigos);
+                        }
                     }
 
                     else if (j - 1 > 0 && matriz[i, j - 1] == 1 && (i - 1 > 0 && matriz[i - 1, j] == 1))
                     //Si hay una sala a la derecha y una abajo
                     {
-                        GameObject uno = (GameObject) Instantiate(sala2PJuntas, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 270, 0));
-                        salas.Add(uno);
-                        numeroEnemigos += 3;
+                        int randi = UnityEngine.Random.Range(0, 10);
+                        if(randi%2==0)
+                        {
+                            GameObject uno = (GameObject) Instantiate(sala2PJuntas, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 270, 0));
+                            salas.Add(uno);
+                            numeroEnemigos += 3;
+                        Debug.Log(numeroEnemigos);
+                        }
+                        else
+                        {
+                            GameObject uno = (GameObject) Instantiate(sala2PJuntasB, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 270, -90));
+                            salas.Add(uno);
+                            numeroEnemigos += 2;
+                        Debug.Log(numeroEnemigos);
+                        }
                     }
                     else if (j + 1 < dimension && matriz[i, j + 1] == 1 && (i - 1 > 0 && matriz[i - 1, j] == 1))
                     //Si hay una sala a la izquierda y una abajo
                     {
-                        GameObject uno = (GameObject) Instantiate(sala2PJuntas, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 0, 0));
-                        salas.Add(uno);
-                        numeroEnemigos += 3;
+                        int randi = UnityEngine.Random.Range(0, 10);
+                        if(randi%2==0)
+                        {
+                            GameObject uno = (GameObject) Instantiate(sala2PJuntas, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 0, 0));
+                            salas.Add(uno);
+                            numeroEnemigos += 3;
+                        Debug.Log(numeroEnemigos);
+                        }
+                        else
+                        {
+                            GameObject uno = (GameObject) Instantiate(sala2PJuntasB, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 0, -90));
+                            salas.Add(uno);
+                            numeroEnemigos += 2;
+                        Debug.Log(numeroEnemigos);
+                        }
                     }
 
                     else if (j + 1 < dimension && matriz[i, j + 1] == 1 && (i + 1 < dimension && matriz[i + 1, j] == 1))
                     //Si hay una sala a la izquierda y una arriba
                     {
-                        GameObject uno = (GameObject) Instantiate(sala2PJuntas, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 90, 0));
-                        salas.Add(uno);
-                        numeroEnemigos += 3;
+                        int randi = UnityEngine.Random.Range(0, 10);
+                        if(randi%2==0)
+                        {
+                            GameObject uno = (GameObject) Instantiate(sala2PJuntas, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 90, 0));
+                            salas.Add(uno);
+                            numeroEnemigos += 3;
+                        Debug.Log(numeroEnemigos);
+                        }
+                        else
+                        {
+                            GameObject uno = (GameObject) Instantiate(sala2PJuntasB, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 90, -90));
+                            salas.Add(uno);
+                            numeroEnemigos += 2;
+                        Debug.Log(numeroEnemigos);
+                        }
                     }
 
                     else if (j - 1 > 0 && matriz[i, j - 1] == 1 && (i + 1 < dimension && matriz[i + 1, j] == 1))
                     //Si hay una sala a la arriba y una a la derecha
                     {
-                        GameObject uno = (GameObject) Instantiate(sala2PJuntas, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 180, 0));
-                        salas.Add(uno);
-                        numeroEnemigos += 3;
+                        int randi = UnityEngine.Random.Range(0, 10);
+                        if(randi%2==0)
+                        {
+                            GameObject uno = (GameObject) Instantiate(sala2PJuntas, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 180, 0));
+                            salas.Add(uno);
+                            numeroEnemigos += 3;
+                        Debug.Log(numeroEnemigos);
+                        }
+                        else 
+                        {
+                            GameObject uno = (GameObject) Instantiate(sala2PJuntasB, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 180, -90));
+                            salas.Add(uno);
+                            numeroEnemigos += 2;
+                        Debug.Log(numeroEnemigos);
+                        }
                     }
 
 
@@ -266,30 +346,67 @@ public class GeneradorDeNiveles : MonoBehaviour
                     else if (j + 1 < dimension && matriz[i, j + 1] == 1)
                     //Si solo hay una sala a la derecha
                     {
-                        GameObject uno = (GameObject) Instantiate(sala1P, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, -0, 0));
-                        salas.Add(uno);
-                        numeroEnemigos += 2;
+                        int randi = UnityEngine.Random.Range(0,10);
+                        if(randi%2==0)
+                        {
+                            GameObject uno = (GameObject) Instantiate(sala1PA, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, -0, 0));
+                            salas.Add(uno);
+                            numeroEnemigos += 2;
+                        Debug.Log(numeroEnemigos);
+                        }
+                        else
+                        {
+                            GameObject uno = (GameObject) Instantiate(sala1PB, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, -0, 90));
+                            salas.Add(uno);
+                            numeroEnemigos += 2;
+                        Debug.Log(numeroEnemigos);
+                        }
+
                     }
                     else if (j - 1 > 0 && matriz[i, j - 1] == 1)
                     //Si solo hay una sala a la izquierda
                     {
-                        GameObject uno = (GameObject) Instantiate(sala1P, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, +180, 0));
-                        salas.Add(uno);
-                        numeroEnemigos += 2;
+                        int randi = UnityEngine.Random.Range(0,10);
+                        if(randi%2==0)
+                        {
+                            GameObject uno = (GameObject) Instantiate(sala1PA, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, +180, 0));
+                            salas.Add(uno);
+                            numeroEnemigos += 2;
+                        Debug.Log(numeroEnemigos);
+                        }else
+                        {
+                            GameObject uno = (GameObject) Instantiate(sala1PB, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, +180, 90));
+                            salas.Add(uno);
+                            numeroEnemigos += 2;
+                        Debug.Log(numeroEnemigos);
+                        }
                     }
                     else if (i + 1 < dimension && matriz[i + 1, j] == 1)
                     //Si solo hay una sala a arriba
                     {
-                        GameObject uno = (GameObject) Instantiate(sala1P, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 90, 0));
-                        salas.Add(uno);
-                        numeroEnemigos += 2;
+                        int randi = UnityEngine.Random.Range(0,10);
+                        if(randi%2==0)
+                        {
+                            GameObject uno = (GameObject) Instantiate(sala1PA, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 90, 0));
+                            salas.Add(uno);
+                            numeroEnemigos += 2;
+                        Debug.Log(numeroEnemigos);
+                        }
+                        else
+                        {
+                            GameObject uno = (GameObject) Instantiate(sala1PB, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 90, 90));
+                            salas.Add(uno);
+                            numeroEnemigos += 2;
+                        Debug.Log(numeroEnemigos);
+                        }
                     }
                     else if (i - 1 > 0 && matriz[i - 1, j] == 1)
                     //Si solo hay una sala abajo
                     {
-                        GameObject uno = (GameObject) Instantiate(sala1P, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 270, 0));
+                        GameObject uno = (GameObject) Instantiate(sala1PA, new Vector3(i * 90F, 150f, j * 90F), Quaternion.Euler(-90, 270, 0));
                         salas.Add(uno);
                         numeroEnemigos += 2;
+                        Debug.Log(numeroEnemigos);
                     }
 
                 }
@@ -411,8 +528,9 @@ public class GeneradorDeNiveles : MonoBehaviour
     void batallaBoss()
     {
         jugador.transform.position = new Vector3(1133f, 89f, -43f);
-        Instantiate(calavera, new Vector3(1136f, 92f,-32f), Quaternion.Euler(-90, 180, 0));
+        Instantiate(calavera, new Vector3(1136f, 92f, 32f), Quaternion.Euler(-90, 180, 0));
         rb.velocity = Vector3.zero;
+        LuzGeneral.SetActive(false);
     }
 
     void nextLevel()
@@ -442,5 +560,3 @@ public class GeneradorDeNiveles : MonoBehaviour
         boss = false;
     }
 }
-
-
