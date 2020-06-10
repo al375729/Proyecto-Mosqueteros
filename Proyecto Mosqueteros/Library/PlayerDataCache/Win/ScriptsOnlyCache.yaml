@@ -1,16 +1,34 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - BossTroyano
+    - Autodestruir
+    - Boton
+    - BotonSalir
     - ColisionesDisparo
+    - Contadores
     - ControlCamara
     - DisparoJugador
+    - EnemigoBasico
+    - EnemigoDisparo
     - EnemigoPerseguidor
     - GeneraBalas
     - GeneradorDeNiveles
+    - MenuPausa
     - Movimiento
+    - PaqueteBalas
+    - TorretaFinalDisparo
+    - Vida
+    - VidaJugador
+    NavMeshComponents.dll:
+    - UnityEngine.AI.NavMeshSurface
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -18,10 +36,66 @@ ScriptsOnlyBuild:
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Slider
+    - UnityEngine.UI.Text
   sceneClasses:
+    Assets/Main.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11150}
+    - Class: 114
+      Script: {instanceID: 11318}
+    - Class: 114
+      Script: {instanceID: 11358}
+    - Class: 114
+      Script: {instanceID: 11752}
+    - Class: 114
+      Script: {instanceID: 11764}
+    - Class: 114
+      Script: {instanceID: 12142}
+    - Class: 114
+      Script: {instanceID: 12634}
+    - Class: 114
+      Script: {instanceID: 12636}
+    - Class: 114
+      Script: {instanceID: 12994}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
     Assets/Scenes/Pruebas.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -35,6 +109,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 28
       Script: {instanceID: 0}
+    - Class: 29
+      Script: {instanceID: 0}
     - Class: 33
       Script: {instanceID: 0}
     - Class: 43
@@ -43,11 +119,15 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
-    - Class: 64
-      Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -56,30 +136,56 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11150}
     - Class: 114
-      Script: {instanceID: 11346}
+      Script: {instanceID: 11152}
     - Class: 114
-      Script: {instanceID: 11440}
+      Script: {instanceID: 11318}
     - Class: 114
-      Script: {instanceID: 11730}
+      Script: {instanceID: 11358}
     - Class: 114
-      Script: {instanceID: 11820}
+      Script: {instanceID: 11376}
     - Class: 114
-      Script: {instanceID: 11998}
+      Script: {instanceID: 11454}
     - Class: 114
-      Script: {instanceID: 12196}
+      Script: {instanceID: 11574}
     - Class: 114
-      Script: {instanceID: 12306}
+      Script: {instanceID: 11696}
     - Class: 114
-      Script: {instanceID: 12396}
+      Script: {instanceID: 11752}
     - Class: 114
-      Script: {instanceID: 12590}
+      Script: {instanceID: 11846}
     - Class: 114
-      Script: {instanceID: 12726}
+      Script: {instanceID: 12030}
     - Class: 114
-      Script: {instanceID: 12906}
+      Script: {instanceID: 12142}
     - Class: 114
-      Script: {instanceID: 12942}
+      Script: {instanceID: 12190}
+    - Class: 114
+      Script: {instanceID: 12230}
+    - Class: 114
+      Script: {instanceID: 12260}
+    - Class: 114
+      Script: {instanceID: 12342}
+    - Class: 114
+      Script: {instanceID: 12392}
+    - Class: 114
+      Script: {instanceID: 12434}
+    - Class: 114
+      Script: {instanceID: 12596}
+    - Class: 114
+      Script: {instanceID: 12634}
+    - Class: 114
+      Script: {instanceID: 12752}
+    - Class: 114
+      Script: {instanceID: 12956}
+    - Class: 114
+      Script: {instanceID: 12984}
+    - Class: 114
+      Script: {instanceID: 12994}
+    - Class: 114
+      Script: {instanceID: 13024}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 134
       Script: {instanceID: 0}
@@ -87,13 +193,19 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 136
       Script: {instanceID: 0}
+    - Class: 137
+      Script: {instanceID: 0}
     - Class: 157
+      Script: {instanceID: 0}
+    - Class: 195
       Script: {instanceID: 0}
     - Class: 196
       Script: {instanceID: 0}
     - Class: 198
       Script: {instanceID: 0}
     - Class: 199
+      Script: {instanceID: 0}
+    - Class: 205
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -103,6 +215,12 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
+    - Class: 225
+      Script: {instanceID: 0}
+    - Class: 238
+      Script: {instanceID: 0}
+    - Class: 363
+      Script: {instanceID: 0}
   scriptHashData:
   - hash:
       serializedVersion: 2
@@ -110,6 +228,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: CanvasScaler
+  - hash:
+      serializedVersion: 2
+      Hash: 75684251bbed7f5adc28a7009ef8d529
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Contadores
   - hash:
       serializedVersion: 2
       Hash: 3c08375166df118bd1801438fc36b92f
@@ -128,6 +252,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_Dropdown
+  - hash:
+      serializedVersion: 2
+      Hash: 2b19be13f00df62e6d4d4f5539bcad51
+    assemblyName: NavMeshComponents.dll
+    namespaceName: UnityEngine.AI
+    className: NavMeshModifier
+  - hash:
+      serializedVersion: 2
+      Hash: c8c672fee8a258266e51b55a210b8083
+    assemblyName: NavMeshComponents.dll
+    namespaceName: UnityEngine.AI
+    className: NavMeshLink
   - hash:
       serializedVersion: 2
       Hash: e7a73f5f78ba6445195ec23b74a1ce2d
@@ -184,6 +320,12 @@ ScriptsOnlyBuild:
     className: TestResultRendererCallback
   - hash:
       serializedVersion: 2
+      Hash: 01af4252a8e696ed17044658cd2d7f38
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PaqueteBalas
+  - hash:
+      serializedVersion: 2
       Hash: 234235b9fb07320d11497e08a726cc56
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -196,7 +338,7 @@ ScriptsOnlyBuild:
     className: GridLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 40d1a7b988e9c42afbe2df5ffe8ba26d
+      Hash: 14864887a8d3e712468886fd86eb4a52
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ColisionesDisparo
@@ -226,6 +368,12 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
+      Hash: e59c054231f582882055d69223fd78ce
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Pausa
+  - hash:
+      serializedVersion: 2
       Hash: bd3cf68c8964d3c66d1c43f4f98508c9
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -242,6 +390,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: RectMask2D
+  - hash:
+      serializedVersion: 2
+      Hash: fa76a33a5060c068dee29d37e1c11b53
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: VidaJugador
   - hash:
       serializedVersion: 2
       Hash: 4e9333594897a1fb8b136ad2eae996c7
@@ -268,6 +422,12 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
+      Hash: e34c974df2507399bd281665f4923b06
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemigoBasico
+  - hash:
+      serializedVersion: 2
       Hash: cc4274b586df3c02688bac01b88bd16c
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -278,6 +438,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ControlPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 4c3c00bf9e4e834c38e63ee471bf0bcb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Boton
   - hash:
       serializedVersion: 2
       Hash: b8a5e8091ab0b8861d2add371082c5e0
@@ -298,10 +464,16 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
-      Hash: bc80adda2a65392dbffc2afdb732a6d2
+      Hash: 0fbaff29af3b4b579f2cc4476b9bbe57
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GeneradorDeNiveles
+  - hash:
+      serializedVersion: 2
+      Hash: 7299a528424874bcf6b5736b5305ac37
+    assemblyName: NavMeshComponents.dll
+    namespaceName: UnityEngine.AI
+    className: NavMeshModifierVolume
   - hash:
       serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
@@ -328,7 +500,7 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
-      Hash: bb3131caf78afa67aad30b9477ee8841
+      Hash: 1f82d913e69db9ac39d9b3112468b769
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnemigoPerseguidor
@@ -358,7 +530,13 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: 7934888fa5516c5357538b9c617b71c7
+      Hash: 93f7a510915ada2d15b309cd3281c787
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TorretaFinalDisparo
+  - hash:
+      serializedVersion: 2
+      Hash: eb7dc8a547120db92350a29011971392
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DisparoJugador
@@ -368,6 +546,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: VerticalLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: f9f833a680136ebffa9afe7ea42b6472
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemigoDisparo
   - hash:
       serializedVersion: 2
       Hash: 783f593b9380cf72d0f7ebfd4a0d4bcd
@@ -418,6 +602,12 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 3813049e29a821293a7f8594c6bcbacd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MenuPausa
+  - hash:
+      serializedVersion: 2
       Hash: 00eb57b0e6ed148c885603c929979521
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -430,10 +620,22 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
+      Hash: 93f7a510915ada2d15b309cd3281c787
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TorretaDisparo
+  - hash:
+      serializedVersion: 2
       Hash: 3b760e6526e13f7504f59e210145899a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextMeshProUGUI
+  - hash:
+      serializedVersion: 2
+      Hash: 8d4458b476a9a4dd8df843a849fcfffa
+    assemblyName: NavMeshComponents.dll
+    namespaceName: UnityEngine.AI
+    className: NavMeshSurface
   - hash:
       serializedVersion: 2
       Hash: f336e086360abe49a3323e5f1583c35a
@@ -448,10 +650,22 @@ ScriptsOnlyBuild:
     className: GraphicRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 4c3c00bf9e4e834c38e63ee471bf0bcb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BotonSalir
+  - hash:
+      serializedVersion: 2
       Hash: 88cc9df3c6fc697bfbeacd24c0d6f2d7
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools
     className: BeforeAfterTestCommandState
+  - hash:
+      serializedVersion: 2
+      Hash: 02e912c73f4714475cec934a19866f07
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Autodestruir
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -538,6 +752,12 @@ ScriptsOnlyBuild:
     className: Dropdown
   - hash:
       serializedVersion: 2
+      Hash: 1028c39545bcfa841aaab54121e69a47
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Vida
+  - hash:
+      serializedVersion: 2
       Hash: 748dd2a2a28da4e618912da5ac45684b
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -574,5 +794,6 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   platform: 5
   scenePathNames:
+  - Assets/Main.unity
   - Assets/Scenes/Pruebas.unity
-  playerPath: C:/Users/usuario/Documents/GitHub/Proyecto-Mosqueteros/Proyecto Mosqueteros.exe
+  playerPath: C:/Users/usuario/Documents/GitHub/Antivirus/Proyecto Mosqueteros.exe

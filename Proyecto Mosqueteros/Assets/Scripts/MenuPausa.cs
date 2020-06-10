@@ -9,11 +9,14 @@ public class MenuPausa : MonoBehaviour
     public GameObject pausa;
     public static bool isPaused = false;
     public Button boton;
+    public Button boton2;
 
     void Start()
     {
-        Button btn = boton.GetComponent<Button>();
-        btn.onClick.AddListener(TaskOnClick);
+        Button btnSeguirJugando = boton.GetComponent<Button>();
+        Button btnVolver = boton2.GetComponent<Button>();
+        btnSeguirJugando.onClick.AddListener(SeguirJugando);
+        btnVolver.onClick.AddListener(Volver);
 
     }
     void Update()
@@ -63,8 +66,13 @@ public class MenuPausa : MonoBehaviour
         isPaused = false;
 
     }
-    void TaskOnClick()
+    void SeguirJugando()
     {
         DesctivarPausa();
+    }
+
+    void Volver()
+    {
+        SceneManager.LoadScene("Main");       
     }
 }

@@ -96,6 +96,8 @@ public class GeneradorDeNiveles : MonoBehaviour
     void generate()
     {
         LuzGeneral.SetActive(true);
+        numeroEnemigos = 0;
+
         Contadores.mostrar = true;
         numSalas = 10 + nivel;
         int ran;
